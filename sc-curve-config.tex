@@ -669,32 +669,28 @@ constant on a K3 surface.
 
 		Now let $\mathcal{L} = \{l_1,l_2, \ldots,  l_{48}\}$ be the arrangement consisting of all these 48 lines. We fix two enumerations of the set 
 		$\{\zeta, -\zeta, i\zeta, -i\zeta \}$: $\alpha_1, \alpha_2, \alpha_3, \alpha_4$ and $\beta_1, \beta_2, \beta_3, \beta_4$ and then define 
-		\begin{eqnarray}
+		\begin{eqnarray*}
 		\mathcal{L}_{\alpha_i} := \text{Set of lines in } X \cap V(x_0 - \alpha_i x_1) \\
 		\mathcal{L}_{\beta_j} := \text{Set of lines in } X \cap V(x_2 - \beta_j x_3)
-		\end{eqnarray}
-Here $V(f)$ (for a polynomial $f$) denotes the vanishing locus of $f$. Note that, these $8$ sets, each consisting of $4$ lines of type $A$, has the property that each lines (of type $A$) appears in exactly two of these eight sets. Similarly, we can define 
+		\end{eqnarray*}
+Here $V(f)$ (for a homogeneous polynomial $f$) denotes the vanishing locus of $f$. Note that, these $8$ sets, each consisting of $4$ lines of type $A$, has the property that each lines (of type $A$) appears in exactly two of these eight sets. Similarly, we can define 
 $\mathcal{L}_{\alpha_i}'$, $\mathcal{L}_{\beta_j}'$ (lines of type $A'$)  and $\mathcal{L}_{\alpha_i}''$, $\mathcal{L}_{\beta_j} ''$ (lines of type $A''$) by intersecting $X$ with the 
 hyperplanes $V(x_0 - \alpha_i x_2)$, $V(x_1 - \beta_j x_3)$, and $V(x_0 - \alpha_i x_3)$, $V(x_1 - \beta_j x_2)$ respectively, and the same property holds as that of type $A$. 
 
 This gives a collection of 24 sets which we rename as $\mathcal{L}_1$, $\mathcal{L}_2$, \ldots, $\mathcal{L}_{24}$  containing 4 lines each from $\mathcal{L}$ such that each $l_i$ is exactly in two of this list. 
 		
-From the intersection behaviour which is well known, it is clear that the only singular points for the arrangement $\mathcal{L}$ are either double points or quadruple points; \cite[Example 3.3]{Pok1}. It is also not difficult to see that the number of singular points on any line  in $\mathcal{L}$ is 10, as we show now. 
+From the intersection behaviour of these lines, which is well known on Fermat quartic, it is clear that the only singular points for the arrangement $\mathcal{L}$ are either double points or quadruple points; \cite[Example 3.3]{Pok1}. It is also not difficult to see that the number of singular points on any line  in $\mathcal{L}$ is 10, as we show now. 
 		It suffices to verify this assertion for a line of type $A$. Given a line, denoted by $l_{\alpha_i,\beta_j}$ of type $A$, we know that it has two quadruple points $[\alpha_i :1 :0 :0]$ and $[0 :0 :\beta_j :1]$. We also know that each line of type $A$ meets 
 		4 lines each of type $A'$ and $A''$ and these points are all double points. Therefore in all there are 10 singular points on a line of type $A$. By a similar argument one can show this for lines of type $A'$ and type $A''$ also.  
 		
 		We now compute the multi-point Seshadri constant of $\mathcal{O}_X(1)$ at the singular locus of 
 		the arrangement $\mathcal{L}$.  This arrangement has 216 singular points. So we have 
 		$$\varepsilon(X, \mathcal{O}_X(1), \text{Sing}(\mathcal{L})) \le \sqrt{\frac{4}{216}} \sim 0.136.$$
-		
-		In fact, we claim that
+In fact, we claim that
 		\[
 		\varepsilon(X, \mathcal{O}_X(1), \text{Sing}(\mathcal{L})) = \frac{1}{10}.
 		\]
-		
-		
-		
-		Note that each line $l_{\alpha_i,\beta_j}$ has degree 1 in $\mathbb{P}^3$. So,  from the above discussion, it is clear that 
+Note that each line $l_{\alpha_i,\beta_j}$ has degree 1 in $\mathbb{P}^3$. So,  from the above discussion, it is clear that 
 		\[
 		\frac{\mathcal{O}_X(1)\cdot l_{\alpha_i,\beta_j}}{10} %= \frac{(l_{\alpha_i,\beta_1} + l_{\alpha_i,\beta_2} + l_{\alpha_i,\beta_3} + l_{\alpha_i,\beta_4})\cdot  l_{\alpha_i,\beta_j} }{10} 
 		= \frac{1}{10}.
