@@ -65,6 +65,7 @@
 \newtheorem{discussion}[theorem]{Discussion}
 \newtheorem{assumption}[theorem]{Assumption}
 \usepackage{xcolor}
+\usepackage{comment}
 
 %\newcommand\npara{
 	%\setlength{\parindent}{0.2in}
@@ -222,7 +223,7 @@ Finally, we give an example of a computation of multi-point Seshadri constant at
 	%\subsection{General results for any surface}
 	We work with curve configurations on surfaces satisfying the following assumption. 
 	\begin{assumption}\label{star1}
-		Let $\mathcal{C}=\{C_1,C_2, \ldots ,C_d\}$, $d\geq 4$ be a transversal arrangement of curves
+		Let $\mathcal{C}=\{C_1,C_2, \ldots ,C_d\}$, $d\geq 4$ be a \textcolor{red}{connected} transversal arrangement of curves
 		on a complex smooth projective surface $X$ with the following properties: 
 		\begin{itemize}
 			\item There is no point where all the curves meet, i.e., $t_d=0.$
@@ -665,92 +666,21 @@ constant on a K3 surface.
 		\end{eqnarray*}
 		where $\alpha, \beta \in \{\zeta, -\zeta, i\zeta, -i\zeta \}$ and $\zeta$ is a primitive eighth root of unity. 
 		
-		We describe the intersection behaviour of these lines 
-		below. 
-		
-		First, we consider intersections among lines of type A. 
-		If $$A_1: \; x_0 = \alpha x_1, \;  x_2 = \beta x_3 \text{ and } B_1: \; x_0 = \alpha' x_1, \; x_2 = \beta' x_3$$ then 
-		\[
-		A_1 \cap B_1 \neq \phi \Leftrightarrow x_1 = 0 \;  \text{or} \;  \alpha = \alpha' \; \text{and} \; x_3 = 0\;  \text{or} \; \beta = \beta'.
-		\]
-		This shows that a line $A_1$ of type $A$ meets three lines of the form  $x_0 = \alpha x_1,\; x_2 = \beta' x_3$ ($\beta' \in \{\zeta, -\zeta, i\zeta, -i\zeta \} \textbackslash \{\beta\}$) of type $A$ at $[\alpha :1 :0 :0]$ and 3 other lines of type $A$ of the form $x_0 = \alpha' x_1,\; x_2 = \beta x_3$ ($\alpha' \in \{\zeta, -\zeta, i\zeta, -i\zeta \} \textbackslash \{\alpha\}$) at $[0 :0 :\beta :1]$. 
-		
-		On the other hand, a line $A_1$ of type $A$ meets only 4 out of the 16 lines of type $A'$: 
-		\[
-		A_1 \cap \{x_0 = \alpha' x_2, x_1 = \beta' x_3\} \ne \emptyset
-		\]
-implies
-		%\begin{eqnarray*}
-			$x_0 = \alpha' x_2 = \alpha'  \beta x_3 \; \text{and} \; x_0 = \alpha x_1 = \alpha \beta' x_3$. This shows  
-			%\Rightarrow 
-			$\alpha'  \beta = \alpha \beta'$. Thus the choice of $\beta'$ determines $\alpha'$, giving 4 lines of type $A'$ . Moreover, the intersection point of $A_1$ and a line $\{x_0 = \alpha' x_2, x_1 = \beta' x_3\}$ of type $A'$ 
-			is given by $[\alpha \beta'  : \beta' : \beta : 1]$. 
-			
-			By a similar argument one can see that $A_1$ meets exactly 4 lines of type $A''$. 
-		
 
-		Now let $\mathcal{L} = \{l_1,l_2, \ldots,  l_{48}\}$ be the arrangement consisting of all the 48 lines of type $A$, $A'$ and $A''$ on $X$. 
-		
-		We claim that there exist 24 sets of lines 
-		$\mathcal{L}_1$, $\mathcal{L}_2$, \ldots , $\mathcal{L}_{24}$ containing 4 lines each from $\mathcal{L}$
-		satisfying the following conditions. Let $1 \le i \le 24$. 
-		\begin{itemize}
-		\item Each set $\mathcal{L}_i$ contains 4 lines of the same type. 
-		\item All the  four lines in each set $\mathcal{L}_i$ meet in one point. 
-		\item The divisor obtained by adding the four lines in each  $\mathcal{L}_i$ is linearly equivalent to $\mathcal{O}_X(1)$. 
-		\item Each $l_i$ is contained in exactly two of the sets  $\mathcal{L}_1$, $\mathcal{L}_2, \ldots, \mathcal{L}_{24}$. 
-	\end{itemize}	
-		We will prove that there are 8 sets of the above kind consisting of lines of type $A$. By a similar argument, we get the statement for types $A'$ and $A''$. 
-		%We will prove the 
-		%claim as well as the construction of $\mathcal{L}_1$, $\mathcal{L}_2$, \ldots, $\mathcal{L}_{24}$ simultaneously. 
-		Fix two enumerations of the set $\{\zeta, -\zeta, i\zeta, -i\zeta \}$: $\alpha_1, \alpha_2, \alpha_3, \alpha_4$ and 
-$\beta_1, \beta_2, \beta_3, \beta_4$.
+		Now let $\mathcal{L} = \{l_1,l_2, \ldots,  l_{48}\}$ be the arrangement consisting of all these 48 lines. We fix two enumerations of the set 
+		$\{\zeta, -\zeta, i\zeta, -i\zeta \}$: $\alpha_1, \alpha_2, \alpha_3, \alpha_4$ and $\beta_1, \beta_2, \beta_3, \beta_4$ and then define 
+		\begin{eqnarray}
+		\mathcal{L}_{\alpha_i} := \text{Set of lines in } X \cap V(x_0 - \alpha_i x_1) \\
+		\mathcal{L}_{\beta_j} := \text{Set of lines in } X \cap V(x_2 - \beta_j x_3)
+		\end{eqnarray}
+Here $V(f)$ (for a polynomial $f$) denotes the vanishing locus of $f$. Note that, these $8$ sets, each consisting of $4$ lines of type $A$, has the property that each lines (of type $A$) appears in exactly two of these eight sets. Similarly, we can define 
+$\mathcal{L}_{\alpha_i}'$, $\mathcal{L}_{\beta_j}'$ (lines of type $A'$)  and $\mathcal{L}_{\alpha_i}''$, $\mathcal{L}_{\beta_j} ''$ (lines of type $A''$) by intersecting $X$ with the 
+hyperplanes $V(x_0 - \alpha_i x_2)$, $V(x_1 - \beta_j x_3)$, and $V(x_0 - \alpha_i x_3)$, $V(x_1 - \beta_j x_2)$ respectively, and the same property holds as that of type $A$. 
 
-First, consider the line $$l_{\alpha_1,\beta_1} = \{x_0 = \alpha_1 x_1 \; \text{and} \; x_2 = \beta_1 x_3\}$$ of type $A$. From the intersection behaviour described above, we know that $l_{\alpha_1,\beta_1}$  meets exactly six lines of type $A$ which are given by: 
-		\begin{eqnarray*} 
-		l_{\alpha_1,\beta_i}, &\text{ for }& i=2,3,4, \text{ and }\\
-		l_{\alpha_j,\beta_1}, &\text{ for } & j=2,3,4.
-		\end{eqnarray*} 
+This gives a collection of 24 sets which we rename as $\mathcal{L}_1$, $\mathcal{L}_2$, \ldots, $\mathcal{L}_{24}$  containing 4 lines each from $\mathcal{L}$ such that each $l_i$ is exactly in two of this list. 
 		
-The four lines $l_{\alpha_1,\beta_1},l_{\alpha_1,\beta_2},l_{\alpha_1,\beta_3},l_{\alpha_1,\beta_4} $ meet at the point 
- $[\alpha_1 :1 :0 :0]$ and the four lines $l_{\alpha_1,\beta_1},l_{\alpha_2,\beta_1},l_{\alpha_3,\beta_1},l_{\alpha_4,\beta_1}$ meet at the point  $[0 :0 :\beta_1 :1]$.
- 
- We define  
- \begin{eqnarray*} 
- \mathcal{L}_{\alpha_1} &=&\{l_{\alpha_1,\beta_1},l_{\alpha_1,\beta_2},l_{\alpha_1,\beta_3},l_{\alpha_1,\beta_4} \},\\ 
-\mathcal{L}_{\beta_1} &=& \{l_{\alpha_1,\beta_1},l_{\alpha_2,\beta_1},l_{\alpha_3,\beta_1},l_{\alpha_4,\beta_1} \}.
-\end{eqnarray*}
-
-Similarly, we define $\mathcal{L}_{\alpha_i}$ and  $\mathcal{L}_{\beta_j}$ for every 
-$2 \le i, j \le 4$. 
-
-Note that every line of type $A$ appears in exactly two of the eight sets 
-$\mathcal{L}_{\alpha_i}$ and  $\mathcal{L}_{\beta_j}$, where $1\le i, j \le 4$. 
-More precisely,  a line $l_{\alpha_i,\beta_j}$ of type $A$ is contained only  in $\mathcal{L}_{\alpha_i}$ and in $ \mathcal{L}_{\beta_j}$. 
-
-		
-		%\[
-		%\bigcup\limits_{i=1}^{4} \mathcal{L}_{\alpha_i} = \text{Set of all lines of type $A$} = \bigcup\limits_{j=1}^{4} \mathcal{L}_{\beta_j}
-		%\]
-		
-
-The collection of these $\mathcal{L}_{\alpha_i}$ and $\mathcal{L}_{\beta_j}$ contribute $8$ sets of lines of type $A$. 
-		Similarly we can define $\mathcal{L}_{\alpha_i}'$ and $\mathcal{L}_{\beta_j}'$ from type $A'$ and $\mathcal{L}_{\alpha_i}''$ and $\mathcal{L}_{\beta_j}''$ from type $A''$. This gives a collection of 24 sets which we rename 
-		as $\mathcal{L}_1$, $\mathcal{L}_2$, \ldots, $\mathcal{L}_{24}$ such that each $l_i$ is exactly in two of this list. 		
-
-		We also note that all the lines in $\mathcal{L}_{\alpha_i}$ (respectively, in $\mathcal{L}_{\beta_j}$) lie
-		in the hyperplane given by the vanishing of $x_0 - \alpha_i x_1$ (respectively, $x_2 - \beta_j x_3$) in $\mathbb{P}^3$. In fact, the intersection of these hyperplanes with $X$ is precisely the four lines in question. 
-		Therefore, for $1 \le i, j \le 4$, 
-		\begin{eqnarray*}
-		\mathcal{O}_X(1) &\sim&  \; l_{\alpha_i,\beta_1} + l_{\alpha_i,\beta_2} + l_{\alpha_i,\beta_3} + l_{\alpha_i,\beta_4}, \text{ and } \\
-		\mathcal{O}_X(1) &\sim& \;  l_{\alpha_1,\beta_j} + l_{\alpha_2,\beta_j} + l_{\alpha_3,\beta_j} + l_{\alpha_4,\beta_j}.
-		\end{eqnarray*}
-		
-This proves our claim. 
-		
-		
-		From the intersection behaviour described above, it is clear that the only singular points for the arrangement $\mathcal{L}$ are either double points or quadruple points; \cite[Example 3.3]{Pok1}. It is also not difficult to see that the number of singular points on any line  in $\mathcal{L}$ is 10, as we show now. 
-		It suffices to verify this assertion for a line of type $A$. Given a line $l_{\alpha_i,\beta_j}$ of type $A$, we know that it has two quadruple points $[\alpha_i :1 :0 :0]$ and $[0 :0 :\beta_j :1]$. We also know that each line of type $A$ meets 
+From the intersection behaviour which is well known, it is clear that the only singular points for the arrangement $\mathcal{L}$ are either double points or quadruple points; \cite[Example 3.3]{Pok1}. It is also not difficult to see that the number of singular points on any line  in $\mathcal{L}$ is 10, as we show now. 
+		It suffices to verify this assertion for a line of type $A$. Given a line, denoted by $l_{\alpha_i,\beta_j}$ of type $A$, we know that it has two quadruple points $[\alpha_i :1 :0 :0]$ and $[0 :0 :\beta_j :1]$. We also know that each line of type $A$ meets 
 		4 lines each of type $A'$ and $A''$ and these points are all double points. Therefore in all there are 10 singular points on a line of type $A$. By a similar argument one can show this for lines of type $A'$ and type $A''$ also.  
 		
 		We now compute the multi-point Seshadri constant of $\mathcal{O}_X(1)$ at the singular locus of 
