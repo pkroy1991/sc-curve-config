@@ -658,28 +658,17 @@ linearly equivalent to each other), it gives an interesting computation of a mul
 constant on a K3 surface.
 
 \begin{example}
-		Let $X \subset \mathbb{P}^3$ be a Fermat quartic defined by the vanishing locus of $x_0^4 + x_1^4 + x_2^4 + x_3^4$, where $x_0, \ldots, x_3$ are the coordinates of $\mathbb{P}^3$. Then $X$ contains the following 48 lines; 16 from each of the following three types: 
+		Let $X \subset \mathbb{P}^3$ be a Fermat quartic defined by the vanishing locus of $x_0^4 + x_1^4 + x_2^4 + x_3^4$, where $x_0, \ldots, x_3$ are the coordinates of $\mathbb{P}^3$. 
+		Then $X$ contains the following 48 lines (denoted by $l_{\alpha, \beta}$); 16 from each of the following three types: 
 		\begin{eqnarray*}
 			A: \quad x_0 = \alpha x_1 \; \text{and} \; x_2 = \beta x_3, \\
 			A': \quad x_0 = \alpha x_2 \; \text{and} \; x_1 = \beta x_3, \\
 			A'': \quad x_0 = \alpha x_3 \; \text{and} \; x_1 = \beta x_2,
 		\end{eqnarray*}
-		where $\alpha, \beta \in \{\zeta, -\zeta, i\zeta, -i\zeta \}$ and $\zeta$ is a primitive eighth root of unity. 
+		where $\alpha, \beta \in \{\zeta, -\zeta, i\zeta, -i\zeta \}$ and $\zeta$ is a primitive eighth root of unity. We fix two enumeration $\alpha_i, \beta_j$, for $1\leq i, j \leq 4$ of the set $\{\zeta, -\zeta, i\zeta, -i\zeta \}$. 
 		
 
-		Now let $\mathcal{L} = \{l_1,l_2, \ldots,  l_{48}\}$ be the arrangement consisting of all these 48 lines. We fix two enumerations of the set 
-		$\{\zeta, -\zeta, i\zeta, -i\zeta \}$: $\alpha_1, \alpha_2, \alpha_3, \alpha_4$ and $\beta_1, \beta_2, \beta_3, \beta_4$ and then define 
-		\begin{eqnarray*}
-		\mathcal{L}_{\alpha_i} := \text{Set of lines in } X \cap V(x_0 - \alpha_i x_1) \\
-		\mathcal{L}_{\beta_j} := \text{Set of lines in } X \cap V(x_2 - \beta_j x_3)
-		\end{eqnarray*}
-Here $V(f)$ (for a homogeneous polynomial $f$) denotes the vanishing locus of $f$. Note that, these $8$ sets, each consisting of $4$ lines of type $A$, has the property that each lines (of type $A$) appears in exactly two of these eight sets. Similarly, we can define 
-$\mathcal{L}_{\alpha_i}'$, $\mathcal{L}_{\beta_j}'$ (lines of type $A'$)  and $\mathcal{L}_{\alpha_i}''$, $\mathcal{L}_{\beta_j} ''$ (lines of type $A''$) by intersecting $X$ with the 
-hyperplanes $V(x_0 - \alpha_i x_2)$, $V(x_1 - \beta_j x_3)$, and $V(x_0 - \alpha_i x_3)$, $V(x_1 - \beta_j x_2)$ respectively, and the same property holds as that of type $A$. 
-
-This gives a collection of 24 sets which we rename as $\mathcal{L}_1$, $\mathcal{L}_2$, \ldots, $\mathcal{L}_{24}$  containing 4 lines each from $\mathcal{L}$ such that each $l_i$ is exactly in two of this list. 
-		
-From the intersection behaviour of these lines, which is well known on Fermat quartic, it is clear that the only singular points for the arrangement $\mathcal{L}$ are either double points or quadruple points; \cite[Example 3.3]{Pok1}. It is also not difficult to see that the number of singular points on any line  in $\mathcal{L}$ is 10, as we show now. 
+Now let $\mathcal{L} = \{l_1,l_2, \ldots,  l_{48}\}$ be the arrangement consisting of all these 48 lines. From the intersection behaviour of these lines, which is well known on Fermat quartic, it is clear that the only singular points for the arrangement $\mathcal{L}$ are either double points or quadruple points; \cite[Example 3.3]{Pok1}. It is also not difficult to see that the number of singular points on any line  in $\mathcal{L}$ is 10, as we show now. 
 		It suffices to verify this assertion for a line of type $A$. Given a line, denoted by $l_{\alpha_i,\beta_j}$ of type $A$, we know that it has two quadruple points $[\alpha_i :1 :0 :0]$ and $[0 :0 :\beta_j :1]$. We also know that each line of type $A$ meets 
 		4 lines each of type $A'$ and $A''$ and these points are all double points. Therefore in all there are 10 singular points on a line of type $A$. By a similar argument one can show this for lines of type $A'$ and type $A''$ also.  
 		
@@ -697,14 +686,17 @@ Note that each line $l_{\alpha_i,\beta_j}$ has degree 1 in $\mathbb{P}^3$. So,  
 		\]
 		Now let $C \subset X$ be any reduced and irreducible curve such that $C \notin \mathcal{L}$ and which passes through some point in the singular locus of 
 		$\mathcal{L}$. By B\'ezout's theorem, we have the following inequality for every line $l \in \mathcal{L}$:
-		$$C \cdot l \ge \sum_{p \in l \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C.$$
-		
-		We now sum such inequalities over all the 24 sets constructed above. Each such set contributes $C\cdot \mathcal{O}_X(1) = \text{deg}(C)$ to the left hand side. On the right hand side, each line appears twice. Since each double point appears in two lines and each quadruple point appears in four lines, we obtain 
-			\begin{eqnarray*}
+		$$2 C \cdot l \ge 2\left( \sum_{p \in l \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right).$$
+We now sum such inequalities over all the 48 lines and then we re-group the lines (as a set of 4), in such a way that sum of each group corresponds to $\mathcal{O}_X(1)$.  Therefore, we get
+               \begin{eqnarray*}
+                \sum\limits_{i=1}^{48} 2 C \cdot l_i &\ge& \sum\limits_{i=1}^{48} 2\left( \sum_{p \in l_i \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right) \\
+                \Rightarrow  \sum\limits_{i=1}^{24} C \cdot \mathcal{O}_X(1) &\ge&  2\left( \sum\limits_{i=1}^{48}\sum_{p \in l_i \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right).
+               \end{eqnarray*}
+Now, since each double point appears in two lines and each quadruple point appears in four lines, we obtain 
+		\begin{eqnarray*}
 				24 \text{deg}(C) &\geq& 2 \left(2\sum\limits_{p_i \in \text{Sing}_2(\mathcal{L})} \text{mult}_{p_i} C ~+~ 4\sum\limits_{q_j \in \text{Sing}_4(\mathcal{L})} \text{mult}_{q_j}C \right) \\
 		 &\geq& 4 \sum\limits_{p \in\text{Sing}(\mathcal{L})} \text{mult}_{p}C.
 		\end{eqnarray*}
-		
 		%%%%%
 		\iffalse
 		Using the sets  $\mathcal{L}_1$, $\mathcal{L}_2$, \ldots, $\mathcal{L}_{24}$  constructed above, we obtain
@@ -717,10 +709,9 @@ Note that each line $l_{\alpha_i,\beta_j}$ has degree 1 in $\mathbb{P}^3$. So,  
 		\Longrightarrow 6 \text{deg}(C) &\geq&  \sum\limits_{p \in C\cap \text{Sing}(\mathcal{L})} \text{mult}_{p}C.
 		\end{eqnarray*}
 		\fi
-		
+		%
 		%%%
-		
-		Here $\text{Sing}_2(\mathcal{L})$ and $\text{Sing}_4(\mathcal{L})$ denote the set of double points and the set of quadruple points of the arrangement $\mathcal{L}$, respectively. Therefore we get 
+Here $\text{Sing}_2(\mathcal{L})$ and $\text{Sing}_4(\mathcal{L})$ denote the set of double points and the set of quadruple points of the arrangement $\mathcal{L}$, respectively. Therefore we get 
 		\[
 		\frac{\mathcal{O}_X(1) \cdot C}{\sum\limits_{p \in \text{Sing}(\mathcal{L})} \text{mult}_{p}C} = \frac{\text{deg}(C)}{ \sum\limits_{p \in\text{Sing}(\mathcal{L})} \text{mult}_{p}C} \geq \frac{1}{6} > \frac{1}{10}.
 		\]
