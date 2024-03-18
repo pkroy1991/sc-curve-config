@@ -86,10 +86,7 @@ India.}
 
 \author[P. K. Roy]{Praveen Kumar Roy}
 
-\address{UM-DAE Centre for Excellence in Basic Sciences
-"Nalanda", Opp Nano Sciences Building,
-University of Mumbai, Vidyanagari,
-Mumbai 400098, India.}
+\address{UM-DAE Centre for Excellence in Basic Sciences, University of Mumbai Santacruz, Mumbai 400098, India}
 
 \email{praveen.roy@cbs.ac.in}
 
@@ -687,11 +684,18 @@ Intersection behaviour of lines on a Fermat quartic is classically well-known.
 %From the intersection behaviour of these lines, which is well known on Fermat quartic, 
 In particular, it is known that the only singular points for the arrangement $\mathcal{L}$ are either double points or quadruple points; \cite[Example 3.3]{Pok1}. It is also not difficult to see that the number of singular points on any line $l$ in $\mathcal{L}$ is 10. Of these, two are quadruple points obtained by intersecting $l$ with lines of the same type. The remaining eight points are double points obtained by intersecting $l$ with lines of different types. 
 
-For a fixed $\alpha \in \{\zeta, -\zeta, i\zeta, -i\zeta \}$, the hyperplane section $X \cap V(x_0 - \alpha x_1)$ is the union of the four lines of type $A$ in $\mathcal{L}$ 
+%For a fixed $\alpha \in \{\zeta, -\zeta, i\zeta, -i\zeta \}$, 
+
+The hyperplane section $X \cap V(x_0 - \zeta x_1)$ is the union of the four lines of type $A$ in $\mathcal{L}$ 
 given by  
-$x_0 = \alpha x_1 \; \text{and} \; x_2 = \beta_j x_3$
-for  $1\leq j \leq 4$. Consequiently, the sum of these four lines is linearly equivalent to $\mathcal{O}_X(1)$. The 48 lines in $\mathcal{L}$ can be partitioned into sets of 4 lines each such that the sum of the four lines in each set is 
-linearly equivalent to $\mathcal{O}_X(1)$.
+$x_0 = \zeta x_1 \; \text{and} \; x_2 = \beta_j x_3$
+for  $1\leq j \leq 4$. Consequently, the sum of these four lines is linearly equivalent to $\mathcal{O}_X(1)$. Similarly, the sum of the four lines 
+$x_0 = \alpha_i x_1 \; \text{and} \; x_2 = \zeta x_3$ is linearly equivalent to $\mathcal{O}_X(1)$. Thus we note that the line 
+$x_0 = \zeta x_1 \; \text{and} \; x_2 = \zeta x_3$ is in two different sets of 4 lines each so that the sum of lines in each set is linearly equivalent to $\mathcal{O}_X(1)$.
+Using a similar argument, one can see that there are 24 sets of 4 lines each such that each line in $\mathcal{L}$ appears in \textit{exactly} two of the sets and the sum of the 4 lines in each set is linearly equivalent to $\mathcal{O}_X(1)$.
+
+
+%The 48 lines in $\mathcal{L}$ can be partitioned into sets of 4 lines each such that the sum of the four lines in each set is  linearly equivalent to $\mathcal{O}_X(1)$.
 
 %{\color{red} Can we remove the following paragraph?}
 
@@ -708,16 +712,20 @@ In fact, we claim that
 		\[
 		\varepsilon(X, \mathcal{O}_X(1), \text{Sing}(\mathcal{L})) = \frac{1}{10}.
 		\]
-Note that each line $l_{\alpha_i,\beta_j}$ has degree 1 in $\mathbb{P}^3$. So,  from the above discussion, it is clear that 
+  
+Note that each line $l$ in $\mathcal{L}$ has degree 1 in $\mathbb{P}^3$. From the above discussion, for every line $l \in \mathcal{L}$ it is clear that
 		\[
-		\frac{\mathcal{O}_X(1)\cdot l_{\alpha_i,\beta_j}}{10} %= \frac{(l_{\alpha_i,\beta_1} + l_{\alpha_i,\beta_2} + l_{\alpha_i,\beta_3} + l_{\alpha_i,\beta_4})\cdot  l_{\alpha_i,\beta_j} }{10} 
+		\frac{\mathcal{O}_X(1)\cdot l}{10} %= \frac{(l_{\alpha_i,\beta_1} + l_{\alpha_i,\beta_2} + l_{\alpha_i,\beta_3} + l_{\alpha_i,\beta_4})\cdot  l_{\alpha_i,\beta_j} }{10} 
 		= \frac{1}{10}.
 		\]
+  
 		Now let $C \subset X$ be any reduced and irreducible curve such that $C \notin \mathcal{L}$ and which passes through some point in the singular locus of 
-		$\mathcal{L}$. By B\'ezout's theorem, we have the following inequality for every line $l \in \mathcal{L}$:
+		$\mathcal{L}$. We will show that the Seshadri ratio given by $C$ is strictly bigger than $\frac{1}{10}$. 
+  
+  By B\'ezout's theorem, we have the following inequality for every line $l \in \mathcal{L}$:
 		$$2 C \cdot l \ge 2\left( \sum_{p \in l \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right).$$
   
-We now sum such inequalities over all the 48 lines and then group the lines into sets of four lines, in such a way that the sum of each group corresponds to $\mathcal{O}_X(1)$.  Therefore we get
+We now sum such inequalities over all the 48 lines and then group the lines into sets of four lines, in such a way that the sum of the 4 lines in each set is linearly equivalent to $\mathcal{O}_X(1)$.  Therefore we get
                \begin{eqnarray*}
                 \sum\limits_{i=1}^{48} 2 C \cdot l_i &\ge& \sum\limits_{i=1}^{48} 2\left( \sum_{p \in l_i \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right) \\
                 \Rightarrow  \sum\limits_{i=1}^{24} C \cdot \mathcal{O}_X(1) &\ge&  2\left( \sum\limits_{i=1}^{48}\sum_{p \in l_i \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right).
