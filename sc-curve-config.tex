@@ -223,15 +223,23 @@ Finally, we give an example of a computation of multi-point Seshadri constant at
 	%\subsection{General results for any surface}
 	We work with curve configurations on surfaces satisfying the following assumption. 
 	\begin{assumption}\label{star1}
-		Let $\mathcal{C}=\{C_1,C_2, \ldots ,C_d\}$, $d\geq 4$ be a \textcolor{red}{connected} transversal arrangement of curves
-		on a complex smooth projective surface $X$ with the following properties: 
-		\begin{itemize}
-			\item There is no point where all the curves meet, i.e., $t_d=0.$
-			\item  All the curves $C_i$ in $\mathcal{C}$ are linearly equivalent to a
+		Let $\mathcal{C}=\{C_1,C_2, \ldots ,C_d\}$, $d\geq 4$ be a connected 
+  transversal arrangement of curves 
+		on a complex smooth projective surface $X$ such that all the curves 
+  $C_i$ in $\mathcal{C}$ are linearly equivalent to a
 			fixed divisor $A$ on $X$.
-		\end{itemize}
+ % with the following properties: 
+%		\begin{itemize}
+%			\item There is no point where all the curves meet, i.e., $t_d=0.$
+%			\item  All the curves $C_i$ in $\mathcal{C}$ are linearly equivalent to a
+%			fixed divisor $A$ on $X$.
+%		\end{itemize}
 	\end{assumption}
-	
+
+ \begin{remark} 
+Since each curve in $\mathcal{C}$ is assumed to be linearly equivalent to a fixed divisor $A$, the connectedness hypothesis in 
+Assumption \ref{star1} implies in particular that $C_i\cdot C_j > 0$ for all $1\le i,j \le d$.  Note that the connectedness hypothesis will follow if $A^2 > 0$. 
+ \end{remark}
 	\begin{definition}
 		Let $\mathcal{C}$ be a transversal arrangement of curves on a smooth projective surface $X$
 		satisfying Assumption \ref{star1}. Then we define the \emph{base constant} of $\mathcal{C}$ as 
@@ -544,7 +552,9 @@ $2(k+2) > k^2-1.$ But this is not possible by the choice of $k$.
 
 
 \subsection{Lower bounds on configurational Seshadri constants}\label{bounds}
-We now give some lower bounds on configurational Seshadri constants on ruled surfaces and on surfaces of non-negative Kodaira dimension.	
+We now give some lower bounds on configurational Seshadri constants on ruled surfaces and on surfaces of non-negative Kodaira dimension.	We will 
+work with arrangements of curves satisfying Assumption \ref{star1}. Further, we assume that 
+there is no point where all the curves in $\mathcal{C}$ meet, i.e., $t_d=0.$
 	
 
 	%\textbf{To be added: mention some notation that we follow about ruled
@@ -555,7 +565,8 @@ We now give some lower bounds on configurational Seshadri constants on ruled sur
 		\ge 4$.  Let $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$ be a transversal arrangement of curves
 		satisfying Assumption \ref{star1} such that each curve in
 		$\mathcal{C}$ is numerically equivalent to $A=aC_0+bf$ with $a > 0$
-		and $b \ge ae$. Assume further that either $a\geq 2$ or if $a=1$, there exists a subset of four curves in $\mathcal{C}$ such that there is no point common to all the four curves. Then we have the following Hirzebruch-type inequality for $\mathcal{C}$:\\
+		and $b \ge ae$. Assume further that all the curves in $\mathcal{C}$ do not meet in a point and that 
+  either $a\geq 2$ or if $a=1$, there exists a subset of four curves in $\mathcal{C}$ such that there is no point common to all the four curves. Then we have the following Hirzebruch-type inequality for $\mathcal{C}$:\\
 		\begin{equation*}\label{eq:Hirzebruch type ineq}
 			t_{2}+\frac{3}{4}t_{3} \geq -16+16g+\sum_{k\geq5}(2k-9)t_{k}+
 			d(e(5a^2-2a)-10ab-4ag+4a+4b).\\
@@ -620,7 +631,8 @@ $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$
 	\end{theorem}
 	We now give a lower bound on configurational Seshadri constants on surfaces of non-negative Kodaira dimension.
 	\begin{theorem}
-		Let $X$ be a smooth complex projective surface with non-negative Kodaira dimension and let $C=C_1 + \cdots + C_d$ be a transversal configuration of smooth curves satisfying Assumption \ref{star1}. Let $L$ be an ample line bundle on $X$. Then
+		Let $X$ be a smooth complex projective surface with non-negative Kodaira dimension and let $C=C_1 + \cdots + C_d$ be a transversal configuration of smooth curves satisfying Assumption \ref{star1}. Assume further that all the curves in $\mathcal{C}$ do not meet in a point. 
+  Let $L$ be an ample line bundle on $X$. Then
 		$$\varepsilon_{\mathcal{C}}(
 		L) \geq \frac{d(L\cdot C_1)}{3c_2(X)-K_X^2+4C_1^2 {d \choose 2}-K_X \cdot C-4 \sum_{i=1}^{d} (1-g(C_i))}.$$
 	\end{theorem}
@@ -659,20 +671,29 @@ constant on a K3 surface.
 
 \begin{example}
 		Let $X \subset \mathbb{P}^3$ be a Fermat quartic defined by the vanishing locus of $x_0^4 + x_1^4 + x_2^4 + x_3^4$, where $x_0, \ldots, x_3$ are the coordinates of $\mathbb{P}^3$. 
-		Then $X$ contains the following 48 lines (denoted by $l_{\alpha, \beta}$); 16 from each of the following three types: 
+		Then $X$ contains the following 48 lines; 
+  %(denoted by $l_{\alpha, \beta}$); 
+  16 from each of the following three types: 
 		\begin{eqnarray*}
 			A: \quad x_0 = \alpha x_1 \; \text{and} \; x_2 = \beta x_3, \\
 			A': \quad x_0 = \alpha x_2 \; \text{and} \; x_1 = \beta x_3, \\
 			A'': \quad x_0 = \alpha x_3 \; \text{and} \; x_1 = \beta x_2,
 		\end{eqnarray*}
-		where $\alpha, \beta \in \{\zeta, -\zeta, i\zeta, -i\zeta \}$ and $\zeta$ is a primitive eighth root of unity. We fix two enumeration $\alpha_i, \beta_j$, for $1\leq i, j \leq 4$ of the set $\{\zeta, -\zeta, i\zeta, -i\zeta \}$. 
+		where $\alpha, \beta \in \{\zeta, -\zeta, i\zeta, -i\zeta \}$ and $\zeta$ is a primitive eighth root of unity. We fix two enumerations $\alpha_i, \beta_j$, for $1\leq i, j \leq 4$ of the set $\{\zeta, -\zeta, i\zeta, -i\zeta \}$. 
 		
 
-Now let $\mathcal{L} = \{l_1,l_2, \ldots,  l_{48}\}$ be the arrangement consisting of all these 48 lines. From the intersection behaviour of these lines, which is well known on Fermat quartic, it is clear that the only singular points for the arrangement $\mathcal{L}$ are either double points or quadruple points; \cite[Example 3.3]{Pok1}. It is also not difficult to see that the number of singular points on any line  in $\mathcal{L}$ is 10, as we show now. 
+Now let $\mathcal{L} = \{l_1,l_2, \ldots,  l_{48}\}$ be the arrangement consisting of all these 48 lines. 
+Intersection behaviour of lines on a Fermat quartic is classically well-known. 
+%From the intersection behaviour of these lines, which is well known on Fermat quartic, 
+In particular, it is known that the only singular points for the arrangement $\mathcal{L}$ are either double points or quadruple points; \cite[Example 3.3]{Pok1}. It is also not difficult to see that the number of singular points on any line $l$ in $\mathcal{L}$ is 10. Of these, two are quadruple points obtained by intersecting $l$ with lines of the same type. The remaining eight points are double points obtained by intersecting $l$ with lines of different types. 
+
+{\color{red} Can we remove the following paragraph?}
+
+For the convenience of the reader, we quickly recall the argument below.  
 		It suffices to verify this assertion for a line of type $A$. Given a line, denoted by $l_{\alpha_i,\beta_j}$ of type $A$, we know that it has two quadruple points $[\alpha_i :1 :0 :0]$ and $[0 :0 :\beta_j :1]$. 
-		In fact these points are intersection of lines in $\{l_{\alpha_i,\beta_j} \mid 1\leq j \leq 4 \} = X \cap V(x_0 - \alpha_i x_1)$ and in $\{l_{\alpha_i,\beta_j} \mid 1\leq i \leq 4 \} = X \cap V(x_2 - \beta_j x_3)$ respectively. 
-		Note also that, sum of lines from any of these sets is linearly equivalent to $\mathcal{O}_X(1)$. We also know that each line of type $A$ meets 
-		4 lines each of type $A'$ and $A''$ and these points are all double points. Therefore in all there are 10 singular points on a line of type $A$. By a similar argument one can show this for lines of type $A'$ and type $A''$ also.  
+		In fact, these points are obtained by intersecting the lines in $\{l_{\alpha_i,\beta_j} \mid 1\leq j \leq 4 \} = X \cap V(x_0 - \alpha_i x_1)$ with those in  $\{l_{\alpha_i,\beta_j} \mid 1\leq i \leq 4 \} = X \cap V(x_2 - \beta_j x_3)$. 
+		Note also that the sum of lines from any one of these sets is linearly equivalent to $\mathcal{O}_X(1)$. We also know that each line of type $A$ meets 
+		4 lines each of type $A'$ and $A''$ and these points are all double points. Therefore in all there are 10 singular points on a line of type $A$. By a similar argument one can show this for lines of type $A'$ and type $A''$.  
 		
 		We now compute the multi-point Seshadri constant of $\mathcal{O}_X(1)$ at the singular locus of 
 		the arrangement $\mathcal{L}$.  This arrangement has 216 singular points. So we have 
@@ -689,12 +710,14 @@ Note that each line $l_{\alpha_i,\beta_j}$ has degree 1 in $\mathbb{P}^3$. So,  
 		Now let $C \subset X$ be any reduced and irreducible curve such that $C \notin \mathcal{L}$ and which passes through some point in the singular locus of 
 		$\mathcal{L}$. By B\'ezout's theorem, we have the following inequality for every line $l \in \mathcal{L}$:
 		$$2 C \cdot l \ge 2\left( \sum_{p \in l \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right).$$
-We now sum such inequalities over all the 48 lines and then we re-group the lines (as a set of 4), in such a way that sum of each group corresponds to $\mathcal{O}_X(1)$.  Therefore, we get
+  
+We now sum such inequalities over all the 48 lines and then group the lines into sets of four lines, in such a way that the sum of each group corresponds to $\mathcal{O}_X(1)$.  Therefore we get
                \begin{eqnarray*}
                 \sum\limits_{i=1}^{48} 2 C \cdot l_i &\ge& \sum\limits_{i=1}^{48} 2\left( \sum_{p \in l_i \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right) \\
                 \Rightarrow  \sum\limits_{i=1}^{24} C \cdot \mathcal{O}_X(1) &\ge&  2\left( \sum\limits_{i=1}^{48}\sum_{p \in l_i \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right).
                \end{eqnarray*}
-Now, since each double point appears in two lines and each quadruple point appears in four lines, we obtain 
+
+Since each double point appears in two lines and each quadruple point appears in four lines, we obtain 
 		\begin{eqnarray*}
 				24 \text{deg}(C) &\geq& 2 \left(2\sum\limits_{p_i \in \text{Sing}_2(\mathcal{L})} \text{mult}_{p_i} C ~+~ 4\sum\limits_{q_j \in \text{Sing}_4(\mathcal{L})} \text{mult}_{q_j}C \right) \\
 		 &\geq& 4 \sum\limits_{p \in\text{Sing}(\mathcal{L})} \text{mult}_{p}C.
@@ -713,6 +736,7 @@ Now, since each double point appears in two lines and each quadruple point appea
 		\fi
 		%
 		%%%
+
 Here $\text{Sing}_2(\mathcal{L})$ and $\text{Sing}_4(\mathcal{L})$ denote the set of double points and the set of quadruple points of the arrangement $\mathcal{L}$, respectively. Therefore we get 
 		\[
 		\frac{\mathcal{O}_X(1) \cdot C}{\sum\limits_{p \in \text{Sing}(\mathcal{L})} \text{mult}_{p}C} = \frac{\text{deg}(C)}{ \sum\limits_{p \in\text{Sing}(\mathcal{L})} \text{mult}_{p}C} \geq \frac{1}{6} > \frac{1}{10}.
@@ -722,6 +746,8 @@ Here $\text{Sing}_2(\mathcal{L})$ and $\text{Sing}_4(\mathcal{L})$ denote the se
 		
 		
 	\end{example}
+
+ \subsection*{Acknowledgements} We thank the referee for a careful reading of the paper and for giving many corrections and useful comments which substantially improved the paper. The first author is partially supported by a grant from Infosys Foundation. 
 	
 \subsection*{Declaration of interests}
 The authors declare that they have no known competing financial interests or personal relationships
