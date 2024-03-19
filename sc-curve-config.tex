@@ -192,8 +192,8 @@ We recall below the basic definitions that we require in this paper.
 	$\text{Sing}(\mathcal{C})$. 
 	
 	\begin{definition}
-		Let $\mathcal{C}=\{C_1,C_2, \ldots ,C_d\}$ be an arrangement of irreducible curves
-		on a smooth projective surface $X$ and singular locus $\text{Sing}(\mathcal{C}).$ Let $L$ be an ample line bundle on $X$. We define the \textit{configurational Seshadri constant} of $\mathcal{C}$ as 
+		Let $\mathcal{C}=\{C_1,C_2, \ldots ,C_d\}$ be a connected arrangement of irreducible curves
+		on a smooth projective surface $X$ and let $\text{Sing}(\mathcal{C})$ denote the singular locus.  Let $L$ be an ample line bundle on $X$. We define the \textit{configurational Seshadri constant} of $\mathcal{C}$ as 
 %		\begin{equation*}
 			$$\varepsilon_\mathcal{C}(L):= \frac{\sum\limits_{i=1}^{d}L\cdot C_i}{\sum\limits_{p \in \text{Sing}(\mathcal{C}) }\text{mult}_p(\mathcal{C})}.$$
 %		\end{equation*}
@@ -220,7 +220,7 @@ Finally, we give an example of a computation of multi-point Seshadri constant at
 	%\subsection{General results for any surface}
 	We work with curve configurations on surfaces satisfying the following assumption. 
 	\begin{assumption}\label{star1}
-		Let $\mathcal{C}=\{C_1,C_2, \ldots ,C_d\}$, $d\geq 4$ be a connected 
+		Let $\mathcal{C}=\{C_1,C_2, \ldots ,C_d\}$, $d\geq 4$ be a (connected) 
   transversal arrangement of curves 
 		on a complex smooth projective surface $X$ such that all the curves 
   $C_i$ in $\mathcal{C}$ are linearly equivalent to a
@@ -550,8 +550,8 @@ $2(k+2) > k^2-1.$ But this is not possible by the choice of $k$.
 
 \subsection{Lower bounds on configurational Seshadri constants}\label{bounds}
 We now give some lower bounds on configurational Seshadri constants on ruled surfaces and on surfaces of non-negative Kodaira dimension.	We will 
-work with arrangements of curves satisfying Assumption \ref{star1}. Further, we assume that 
-there is no point where all the curves in $\mathcal{C}$ meet, i.e., $t_d=0.$
+work with arrangements of curves satisfying Assumption \ref{star1}. 
+
 	
 
 	%\textbf{To be added: mention some notation that we follow about ruled
@@ -627,6 +627,7 @@ $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$
 		\end{equation*}
 	\end{theorem}
 	We now give a lower bound on configurational Seshadri constants on surfaces of non-negative Kodaira dimension.
+ 
 	\begin{theorem}
 		Let $X$ be a smooth complex projective surface with non-negative Kodaira dimension and let $C=C_1 + \cdots + C_d$ be a transversal configuration of smooth curves satisfying Assumption \ref{star1}. Assume further that all the curves in $\mathcal{C}$ do not meet in a point. 
   Let $L$ be an ample line bundle on $X$. Then
@@ -730,7 +731,7 @@ In fact, we claim that
   By B\'ezout's theorem, we have the following inequality for every line $l \in \mathcal{L}$:
 		$$2 C \cdot l \ge 2\left( \sum_{p \in l \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right).$$
   
-We now sum such inequalities over all the 48 lines and then group the lines into sets of four lines, in such a way that the sum of the 4 lines in each set is linearly equivalent to $\mathcal{O}_X(1)$.  Therefore we get
+We now sum such inequalities over all the 48 lines and then group the lines into sets of four lines as described above, so that that the sum of the four lines in each set is linearly equivalent to $\mathcal{O}_X(1)$.  Therefore we get
                \begin{eqnarray*}
                 \sum\limits_{i=1}^{48} 2 C \cdot l_i &\ge& \sum\limits_{i=1}^{48} 2\left( \sum_{p \in l_i \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right) \\
                 \Rightarrow  \sum\limits_{i=1}^{24} C \cdot \mathcal{O}_X(1) &\ge&  2\left( \sum\limits_{i=1}^{48}\sum_{p \in l_i \,\cap \,\text{Sing} (\mathcal{L})} \text{mult}_p C \right).
@@ -766,7 +767,7 @@ Here $\text{Sing}_2(\mathcal{L})$ and $\text{Sing}_4(\mathcal{L})$ denote the se
 		
 	\end{example}
 
- \subsection*{Acknowledgements} We thank the referee for a careful reading of the paper and for giving many corrections and useful comments which substantially improved the paper. The first author is partially supported by a grant from Infosys Foundation. 
+ \subsection*{Acknowledgements} We thank the referee for a careful reading of the paper, pointing out some corrections and giving several useful comments which substantially improved the paper. The first author is partially supported by a grant from Infosys Foundation. 
 	
 \subsection*{Declaration of interests}
 The authors declare that they have no known competing financial interests or personal relationships
