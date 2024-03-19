@@ -154,7 +154,7 @@ Tirupati, Andhra Pradesh, INDIA – 517507.}
 	
 	In \cite{JP}, the authors also study the multi-point Seshadri constants of $\mathcal{O}_{\mathbb{P}^{2}_{\mathbb{C}}}(1)$ centered at singular loci of certain curve arrangements $\mathcal{C}$ in ${\mathbb{P}^{2}_{\mathbb{C}}}$ using a combinatorial invariant called the  \textit{configurational Seshadri constant of $\mathcal{C}$}. They give lower bounds for the configurational Seshadri constants of $\mathcal{O}_{\mathbb{P}^{2}_{\mathbb{C}}}(1)$ and also provide some actual values of the multi-point Seshadri constants for some classes of curve arrangements, comparing them with their associated configurational Seshadri constants.
 	
-In this paper, we continue this study by looking at curve arrangements on arbitrary surfaces. We prove some analogues of the results in \cite{JP} for arbitrary surfaces. We work over the field of complex numbers. 
+In this paper, we continue this study by looking at connected curve arrangements on arbitrary surfaces. We prove some analogues of the results in \cite{JP} for arbitrary surfaces. We work over the field of complex numbers. 
 
 
 We recall below the basic definitions that we require in this paper. 	
@@ -690,7 +690,9 @@ The hyperplane section $X \cap V(x_0 - \zeta x_1)$ is the union of the four line
 given by  
 $x_0 = \zeta x_1 \; \text{and} \; x_2 = \beta_j x_3$
 for  $1\leq j \leq 4$. Consequently, the sum of these four lines is linearly equivalent to $\mathcal{O}_X(1)$. Similarly, the sum of the four lines 
-$x_0 = \alpha_i x_1 \; \text{and} \; x_2 = \zeta x_3$ is linearly equivalent to $\mathcal{O}_X(1)$. Thus we note that the line 
+$x_0 = \alpha_i x_1 \; \text{and} \; x_2 = \zeta x_3$, 
+for $1\leq i \leq 4$, 
+is linearly equivalent to $\mathcal{O}_X(1)$. Thus we note that the line 
 $x_0 = \zeta x_1 \; \text{and} \; x_2 = \zeta x_3$ is in two different sets of 4 lines each so that the sum of lines in each set is linearly equivalent to $\mathcal{O}_X(1)$.
 Using a similar argument, one can see that there are 24 sets of 4 lines each such that each line in $\mathcal{L}$ appears in \textit{exactly} two of the sets and the sum of the 4 lines in each set is linearly equivalent to $\mathcal{O}_X(1)$.
 
@@ -712,10 +714,13 @@ In fact, we claim that
 		\[
 		\varepsilon(X, \mathcal{O}_X(1), \text{Sing}(\mathcal{L})) = \frac{1}{10}.
 		\]
-  
-Note that each line $l$ in $\mathcal{L}$ has degree 1 in $\mathbb{P}^3$. From the above discussion, for every line $l \in \mathcal{L}$ it is clear that
+
+  We first show that the Seshadri ratio computed by a line in $\mathcal{L}$ is $\frac{1}{10}$. 
+   As mentioned above, every line in $\mathcal{L}$ contains exactly 10 singular points of $\mathcal{L}$. 
+   Note that each line $l$ in $\mathcal{L}$ has degree 1 in $\mathbb{P}^3$.
+   So for every line $l \in \mathcal{L}$, 
 		\[
-		\frac{\mathcal{O}_X(1)\cdot l}{10} %= \frac{(l_{\alpha_i,\beta_1} + l_{\alpha_i,\beta_2} + l_{\alpha_i,\beta_3} + l_{\alpha_i,\beta_4})\cdot  l_{\alpha_i,\beta_j} }{10} 
+		\frac{\mathcal{O}_X(1)\cdot l}{ \sum\limits_{p \in\text{Sing}(\mathcal{L})} \text{mult}_{p} \,l} %= \frac{(l_{\alpha_i,\beta_1} + l_{\alpha_i,\beta_2} + l_{\alpha_i,\beta_3} + l_{\alpha_i,\beta_4})\cdot  l_{\alpha_i,\beta_j} }{10} 
 		= \frac{1}{10}.
 		\]
   
