@@ -253,7 +253,7 @@ The following question is a generalization of Question \ref{qn1} to curve arrang
 
 By \cite[Example 3.5]{JP}, the above question has a negative answer for the Hesse arrangement of conics 
 in $\mathbb{P}^2$. However it is open for line arrangements in $\mathbb{P}^2$. 
-It is interesting to study the situations in which it is true on arbitrary surfaces. Our main theorem answers this question positively under an additional nefness condition. 
+It is interesting to study the situations in which it is true on arbitrary surfaces. Our main theorem below answers this question positively under an additional nefness condition. 
 
 
 
@@ -359,7 +359,7 @@ $C_1^2(d-1)$. So the following question arises naturally.
 		
 	\end{question}	
 	
-	For star arrangements, the base constant is exactly equal to $C_1^2(d-1)$. We answer the above question positively for some arrangements  in the following  corollaries 
+	For star arrangements, the base constant is exactly equal to $C_1^2(d-1)$. We answer the above question positively for some arrangements below.  
  
 
 
@@ -374,8 +374,10 @@ $C_1^2(d-1)$. So the following question arises naturally.
 	\end{corollary}
 
  \begin{proof}
- The proof is immediate from Theorem \ref{main-theorem}.    
- \end{proof}
+Under the given hypotheses, we have $b_i = C_1^2(d-1)$  and $L\cdot C_i = L\cdot L_1$
+for all $i$. 
+The proof is now immediate from Theorem \ref{main-theorem}.    
+ \end{proof} This immediately gives the following. 
 
 
 	\begin{corollary}
@@ -387,8 +389,8 @@ $C_1^2(d-1)$. So the following question arises naturally.
 
 
 
-The proof of Theorem \ref{main-theorem} shows that for arrangements
-satisfying Assumption \ref{star1}, we have the following lower and upper bounds for the Seshadri constants. 
+The proof of Theorem \ref{main-theorem} can be modified to show that for arrangements
+satisfying Assumption \ref{star1} which are not star arrangements, we still have the following lower and upper bounds for the Seshadri constants. 
 
 
 \begin{corollary}\label{cor-main}
@@ -400,10 +402,22 @@ $$\frac{L\cdot C_1}{C_1^2(d-1)} \le \varepsilon(X, L,{\rm Sing}(\mathcal{C})) \l
 \end{corollary} 
 \begin{proof}
 
-Note that the hypotheses of Theorem \ref{main-theorem} hold here. 
- For any reduced and irreducible curve $D$ which is not in $\mathcal{C}$, we showed in the proof of Theorem \ref{main-theorem}
-that the Seshadri ratio is at least $\frac{L\cdot C_1}{C_1^2(d-1)}$. 
-So we obtain $\frac{L\cdot C_1}{C_1^2(d-1)} \le \varepsilon(X, L,{\rm Sing}(\mathcal{C}))$. 
+Let  $D \notin \mathcal{C}$ be 
+a reduced and irreducible curve which contains some points of the singular locus $\mathcal{P}$ of $\mathcal{C}$. Essentially following the proof of Theorem \ref{main-theorem}, we can show that 
+$$ \frac{L\cdot C_1}{C_1^2(d-1)} \le \frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)}.$$
+
+%$D \notin \mathcal{C}$, we showed in the proof of Theorem \ref{main-theorem} that the Seshadri ratio is at least $\frac{L\cdot C_1}{C_1^2(d-1)}$. 
+%So we obtain $\frac{L\cdot C_1}{C_1^2(d-1)} \le \varepsilon(X, L,{\rm Sing}(\mathcal{C}))$. 
+
+Indeed, suppose that the above inequality does not hold. 
+As in the proof of Theoerem \ref{main-theorem}, B\'ezout's theorem applied to $D$ and $C_1+\dots+C_d$ gives
+		
+
+$$		 D\cdot (C_{1}+ \ldots + C_{d}) \ge  
+\frac{2(d-1)(L \cdot D)C_1^2}{L\cdot C_1}.$$
+
+		Now we use the nefness of 
+  $\frac{dC_1^2}{(d-1)(L\cdot C_1)}L-C_1$ and obtain a contradiction exactly as in the proof of Theorem \ref{main-theorem}. We omit the details since the argument is identical. 
 
 
 For curves in $\mathcal{C}$, the least Seshadri ratio is  $\frac{L \cdot C_1}{\rm{bs} (\mathcal{C})}$. 
