@@ -218,7 +218,112 @@ Finally, we give an example of a computation of multi-point Seshadri constant at
 	
 	\section{Seshadri constants for certain transversal curve arrangements}\label{main}	
 	%\subsection{General results for any surface}
-	We work with curve configurations on surfaces satisfying the following assumption. 
+
+In this section, we will first prove a result computing Seshadri constants for arbitrary transversal arrangements under a nefness condition. We will then study special cases of this theorem. 
+
+
+We first introduce some notation. 
+
+
+	%\begin{definition}
+		Let $\mathcal{C}$ be a transversal arrangement of curves on a smooth projective surface $X$. 
+  
+  For each $1\le i \le d$, let $b_i =  \# \, C_{i} \cap {\rm Sing}(\mathcal{C})$. Since our arrangement is connected, $b_i >0$ for all $i$.
+   We define the \emph{base constant} of $\mathcal{C}$ as 
+   $$\text{bs}(\mathcal{C}) = \max\{b_1,\dots, b_d\},$$ i.e., 
+$\text{bs}(\mathcal{C})$		
+  is equal to the maximum number of singular points  of $\mathcal{C}$ that are contained in a single curve $C_{i} \in \mathcal{C}$.
+	%\end{definition}
+ 
+
+The following question is a generalization of Question \ref{qn1} to curve arrangements on arbitrary surfaces. 
+
+
+	\begin{question}\label{question}
+		Let $\mathcal{C} =\{C_1,C_2, \ldots ,C_d\}$ be a transversal arrangement of curves on a smooth projective surface $X$. Let $L$ be an ample line bundle on $X$. Is it true that
+		\begin{equation*}\varepsilon(X, L,{\rm Sing}(\mathcal{C})) =  \inf_{C_i}{\left{\frac{L\cdot C_i}{b_i}\}\right}?
+		\end{equation*}
+	\end{question}
+
+
+By \cite[Example 3.5]{JP}, the above question has a negative answer for the Hesse arrangement of conics 
+in $\mathbb{P}^2$. However it is open for line arrangements in $\mathbb{P}^2$. 
+It is interesting to study the situations in which it is true on arbitrary surfaces. 
+
+
+For an arbitrary curve arrangement $\mathcal{C}$ satisfying Assumption \ref{star1}, the base constant is at most 
+$C_1^2(d-1)$. So the following question arises naturally. 
+
+	\begin{question}\label{QuestM}
+		Let $\mathcal{C} =\{C_1,C_2, \ldots ,C_d\}$ be a transversal arrangement of curves on a smooth projective surface $X$
+		satisfying Assumption \ref{star1}. Let  ${\rm Sing}(\mathcal{C})$ denote the singular locus of $\mathcal{C}$ and let $L$ be an ample line bundle on $X$. Is it true that
+		\begin{equation}\label{ques}
+			\varepsilon(X, L,{\rm Sing}(\mathcal{C})) \geq \frac{L \cdot C_1}{C_1^2(d-1)} ?	
+		\end{equation}	
+		
+	\end{question}	
+	
+	For star arrangements, the base constant is exactly equal to $C_1^2(d-1)$. We answer this question positively in Corollary \ref{prop:star} for some arrangement. 
+ 
+	
+The following is our main theorem. It gives the value of Seshadri constant for an arbitrary transversal configuration 
+$\mathcal{C} = \{C_1, \dots, C_d\}$
+under a nefness condition. 
+
+
+
+ %We now show that the lower bound in Question \ref{QuestM} can be achieved by certain star configuration of curves on $X.$	So Question \ref{question} has an affirmative answer for these star arrangements. 
+	
+	%\textcolor{red}{Let us denote $b_i =  \# \, C_{i} \cap {\rm Sing}(\mathcal{C})$. Note that since our arrangement is connected, $b_i >0$.}
+ 
+	\begin{theorem}
+		\label{main-theorem} Let $X$ be a nonsingular projective surface and let $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$ be a transversal configuration of curves on $X$ with $d \geq 4$. 
+		Let $L$ be an ample line bundle on $X$
+		such that  $\frac{d\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L-C_i$ is nef for each $i$.   Then 
+		%$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \inf_{C_i}{\frac{L\cdot C_i}{C_i^2(d-1)}}.$$
+		$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \inf_{C_i}{\{\frac{L\cdot C_i}{b_i}\}}.$$
+	\end{theorem}
+	\begin{proof}
+	 Let $\mathcal{P} = \{p_{1}, \ldots, p_{s}\}$ be the singular locus of  $\mathcal{C}$. Note that $p_{1}, \ldots, p_{s}$ are all double points of 
+	  $\mathcal{C}$. Exactly $b_i$ of these points lie on $C_i$. So the Seshadri ratio computed by $C_i$ is precisely 
+	  $ \frac{L\cdot C_i}{b_i}$. %Note that the same ratio is also contributed by each of the curves $C_2,\ldots, C_d$. 
+	 
+	 
+	 Suppose that there exists an irreducible and reduced curve $D$, different from $C_{i}$ for $i \in \{1,\ldots, d\}$, having multiplicity $m_{p}(D)$ at each point $p \in \mathcal{P}$ such that
+		%$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \frac{L\cdot C_1}{C_1^2(d-1)}.$$
+		$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \inf_{C_i}{\frac{L\cdot C_i}{b_i}}.$$
+This implies
+                $$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \frac{L\cdot C_i}{b_i}.$$ for each $i$. \\
+This gives, after adding over all $i$
+		$$(\triangle) : \quad (L \cdot D)\sum b_i < \left(\sum_{p \in \mathcal{P}} m_{p}(D)\right)\sum L\cdot C_i.$$
+		By B\'ezout's theorem, we obtain
+		\begin{eqnarray*}
+		D\cdot C_i &\geq& m_{p}(D) \cdot m_{p\in C_i \cap \mathcal{C}}C_i  \\
+		&=& m_{p}(D)\cdot b_i.
+		\end{eqnarray*}
+for each $i$. Summing over all $i$, we get	
+		\begin{eqnarray*}
+		 D\cdot (C_{1}+ \ldots + C_{d}) &\geq& \sum_{p \in \mathcal{P}}m_{p}(D)\cdot m_{p}(C_{1}+ \ldots + C_{d})\\
+		&\stackrel{(*)}{\geq}& 2\sum_{p \in \mathcal{P}} m_{p}(D) \\
+		&\stackrel{(\triangle)}{>}& \frac{2(L \cdot D)\sum b_i}{\sum L\cdot C_i},
+		\end{eqnarray*}
+		where $(*)$ comes from the fact that all the singular points of $C_{1}+ \ldots + C_{d}$ are at least double points. Now we use the nefness 
+		of $\frac{d\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L-C_i$ and note the following  inequality: 
+		\[
+		\frac{d\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L\cdot D \geq D\cdot C_i.
+		\] 
+		After adding over all $i=1,...,d$, this leads to the following, 
+		\begin{eqnarray*}
+			\frac{d^2\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L\cdot D &\geq&  D\cdot (C_{1}+ \ldots + C_{d}) > \frac{2(L \cdot D)\sum b_i}{\sum L\cdot C_i} \\
+			%\Rightarrow \frac{d^2C_1^2}{d-1} &>& 2(d-1)C_1^2 \quad \quad \text{(since $L$ is ample)} \\
+			\Rightarrow \left(\frac{d}{d-1} \right)^2 &>& 2 \quad \quad \text{(since $\sum b_i > 0$ and $L$ is ample)}.
+		\end{eqnarray*}
+		This is a contradiction, since $d\geq 4$.
+	\end{proof}
+
+
+Now we will work with configurations satisfying some additional assumptions. More specifically, we will make the following assumption. 
+
 	\begin{assumption}\label{star1}
 		Let $\mathcal{C}=\{C_1,C_2, \ldots ,C_d\}$, $d\geq 4$ be a (connected) 
   transversal arrangement of curves 
@@ -272,90 +377,23 @@ $C_1^2(d-1)$. So the following question arises naturally.
 		
 	\end{question}	
 	
-	For star arrangements, the base constant is exactly equal to $C_1^2(d-1)$.
-	We now show that the lower bound in Question \ref{QuestM} can be achieved by certain star configuration of curves on $X.$	So Question \ref{question} has an affirmative answer for these star arrangements. 
-	
-	\textcolor{red}{Let us denote $b_i =  \# \, C_{i} \cap {\rm Sing}(\mathcal{C})$. Note that since our arrangement is connected, $b_i >0$.}
-	\begin{theorem}
-		\label{prop:star} Let $X$ be a nonsingular projective surface and let $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$ be a star configuration of curves on $X$ with $d \geq 4$. 
-		Let $L$ be an ample line bundle on $X$
-		such that  $\frac{d\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L-C_i$ is nef for each $i$.   Then 
-		%$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \inf_{C_i}{\frac{L\cdot C_i}{C_i^2(d-1)}}.$$
-		$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \inf_{C_i}{\{\frac{L\cdot C_i}{b_i}\}}.$$
-	\end{theorem}
-	\begin{proof}
-	 Let $\mathcal{P} = \{p_{1}, \ldots, p_{s}\}$ be the singular locus of  $\mathcal{C}$. Note that $p_{1}, \ldots, p_{s}$ are all double points of 
-	  $\mathcal{C}$. Exactly $b_i$ of these points lie on $C_i$. So the Seshadri ratio computed by $C_i$ is precisely 
-	  $ \frac{L\cdot C_i}{b_i}$. %Note that the same ratio is also contributed by each of the curves $C_2,\ldots, C_d$. 
-	 
-	 
-	 Suppose that there exists an irreducible and reduced curve $D$, different from $C_{i}$ for $i \in \{1,\ldots, d\}$, having multiplicity $m_{p}(D)$ at each point $p \in \mathcal{P}$ such that
-		%$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \frac{L\cdot C_1}{C_1^2(d-1)}.$$
-		$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \inf_{C_i}{\frac{L\cdot C_i}{b_i}}.$$
-This implies
-                $$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \frac{L\cdot C_i}{b_i}.$$ for each $i$. \\
-This gives, after adding over all $i$
-		$$(\triangle) : \quad (L \cdot D)\sum b_i < \left(\sum_{p \in \mathcal{P}} m_{p}(D)\right)\sum L\cdot C_i.$$
-		By B\'ezout's theorem, we obtain
-		\begin{eqnarray*}
-		D\cdot C_i &\geq& m_{p}(D) \cdot m_{p\in C_i \cap \mathcal{C}}C_i  \\
-		&=& m_{p}(D)\cdot b_i.
-		\end{eqnarray*}
-for each $i$. Summing over all $i$, we get	
-		\begin{eqnarray*}
-		 D\cdot (C_{1}+ \ldots + C_{d}) &\geq& \sum_{p \in \mathcal{P}}m_{p}(D)\cdot m_{p}(C_{1}+ \ldots + C_{d})\\
-		&\stackrel{(*)}{\geq}& 2\sum_{p \in \mathcal{P}} m_{p}(D) \\
-		&\stackrel{(\triangle)}{>}& \frac{2(L \cdot D)\sum b_i}{\sum L\cdot C_i},
-		\end{eqnarray*}
-		where $(*)$ comes from the fact that all the singular points of $C_{1}+ \ldots + C_{d}$ are at least double points. Now we use the nefness 
-		of $\frac{d\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L-C_i$ and note the following  inequality: 
-		\[
-		\frac{d\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L\cdot D \geq D\cdot C_i.
-		\] 
-		After adding over all $i=1,...,d$, this leads to the following, 
-		\begin{eqnarray*}
-			\frac{d^2\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L\cdot D &\geq&  D\cdot (C_{1}+ \ldots + C_{d}) > \frac{2(L \cdot D)\sum b_i}{\sum L\cdot C_i} \\
-			%\Rightarrow \frac{d^2C_1^2}{d-1} &>& 2(d-1)C_1^2 \quad \quad \text{(since $L$ is ample)} \\
-			\Rightarrow \left(\frac{d}{d-1} \right)^2 &>& 2 \quad \quad \text{(since $\sum b_i > 0$ and $L$ is ample)}.
-		\end{eqnarray*}
-		This is a contradiction, since $d\geq 4$.
-	\end{proof}
+	For star arrangements, the base constant is exactly equal to $C_1^2(d-1)$. We answer this question positively in Corollary \ref{prop:star} for some arrangement. 
+ 
 
+
+
+ 
+We now prove some corollaries for star arrangements where all the curves are linearly equivalent to a fixed divisor. This answers Question \ref{QuestM} in the affirmative. 
 	
-	\begin{theorem}
+	\begin{corollary}
 		\label{prop:star} Let $X$ be a nonsingular projective surface and let $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$ be a star configuration of curves on $X$ with $d \geq 4$ such that each $ C_i$ is linearly equivalent to a fixed divisor $A$ on $X$. Let $L$ be an ample line bundle on $X$
 		such that  $\frac{dC_1^2}{(d-1)(L\cdot C_1)}L-C_1$ is nef.   Then 
 		$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \frac{L\cdot C_1}{C_1^2(d-1)}.$$
-	\end{theorem}
-	\begin{proof}
-	 Let $\mathcal{P} = \{p_{1}, \ldots, p_{s}\}$ be the singular locus of  $\mathcal{C}$. Note that $p_{1}, \ldots, p_{s}$ are all double points of 
-	  $\mathcal{C}$. Exactly $C_1^2(d-1)$ of these points lie on $C_1$. So the Seshadri ratio computed by $C_1$ is precisely 
-	  $ \frac{L\cdot C_1}{C_1^2(d-1)}$. Note that the same ratio is also contributed by each of the curves $C_2,\ldots, C_d$. 
-	 
-	 
-	 Suppose that there exists an irreducible and reduced curve $D$, different from $C_{i}$ for $i \in \{1,\ldots, d\}$, having multiplicity $m_{p}(D)$ at each point $p \in \mathcal{P}$ such that
-		$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \frac{L\cdot C_1}{C_1^2(d-1)}.$$
-This gives
-		$$(\triangle) : \quad (L \cdot D)C_1^2(d-1) < \left(\sum_{p \in \mathcal{P}} m_{p}(D)\right)L\cdot C_1.$$
-		By B\'ezout's theorem, we obtain
-		\begin{eqnarray*}
-		D\cdot (C_{1}+ \ldots + C_{d})=d(D\cdot C_1) &\geq& \sum_{p \in \mathcal{P}}m_{p}(D)\cdot m_{p}(C_{1}+ \ldots + C_{d})\\
-		&\stackrel{(*)}{\geq}& 2\sum_{p \in \mathcal{P}} m_{p}(D) \\
-		&\stackrel{(\triangle)}{>}& \frac{2(L \cdot D)C_1^2(d-1)}{L\cdot C_1},
-		\end{eqnarray*}
-		where $(*)$ comes from the fact that all the singular points of $C_{1}+ \ldots + C_{d}$ are at least double points. Now we use the nefness 
-		of $\frac{dC_1^2}{(d-1)(L\cdot C_1)}L-C_1$ and note the following  inequality: 
-		\[
-		\frac{dC_1^2}{(d-1)(L\cdot C_1)}L\cdot D \geq D\cdot C_1.
-		\] 
-		This leads to the following:
-		\begin{eqnarray*}
-			\frac{d^2C_1^2}{(d-1)(L\cdot C_1)}L\cdot D &\geq& d (D\cdot C_1) > \frac{2(d-1)(L\cdot D)C_1^2}{L\cdot C_1} \\
-			\Rightarrow \frac{d^2C_1^2}{d-1} &>& 2(d-1)C_1^2 \quad \quad \text{(since $L$ is ample)} \\
-			\Rightarrow \left(\frac{d}{d-1} \right)^2 &>& 2 \quad \quad \text{(since $C_1^2 = C_1\cdot C_2 > 0$)}.
-		\end{eqnarray*}
-		This is a contradiction, since $d\geq 4$.
-	\end{proof}
+	\end{corollary}
+
+ \begin{proof}
+ The proof is immediate from Theorem \ref{main-theorem}.    
+ \end{proof}
 
 
 	\begin{corollary}
