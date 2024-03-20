@@ -275,6 +275,52 @@ $C_1^2(d-1)$. So the following question arises naturally.
 	For star arrangements, the base constant is exactly equal to $C_1^2(d-1)$.
 	We now show that the lower bound in Question \ref{QuestM} can be achieved by certain star configuration of curves on $X.$	So Question \ref{question} has an affirmative answer for these star arrangements. 
 	
+	\textcolor{red}{Let us denote $b_i =  \# \, C_{i} \cap {\rm Sing}(\mathcal{C})$. Note that since our arrangement is connected, $b_i >0$.}
+	\begin{theorem}
+		\label{prop:star} Let $X$ be a nonsingular projective surface and let $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$ be a star configuration of curves on $X$ with $d \geq 4$. 
+		Let $L$ be an ample line bundle on $X$
+		such that  $\frac{d\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L-C_i$ is nef for each $i$.   Then 
+		%$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \inf_{C_i}{\frac{L\cdot C_i}{C_i^2(d-1)}}.$$
+		$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \inf_{C_i}{\{\frac{L\cdot C_i}{b_i}\}}.$$
+	\end{theorem}
+	\begin{proof}
+	 Let $\mathcal{P} = \{p_{1}, \ldots, p_{s}\}$ be the singular locus of  $\mathcal{C}$. Note that $p_{1}, \ldots, p_{s}$ are all double points of 
+	  $\mathcal{C}$. Exactly $b_i$ of these points lie on $C_i$. So the Seshadri ratio computed by $C_i$ is precisely 
+	  $ \frac{L\cdot C_i}{b_i}$. %Note that the same ratio is also contributed by each of the curves $C_2,\ldots, C_d$. 
+	 
+	 
+	 Suppose that there exists an irreducible and reduced curve $D$, different from $C_{i}$ for $i \in \{1,\ldots, d\}$, having multiplicity $m_{p}(D)$ at each point $p \in \mathcal{P}$ such that
+		%$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \frac{L\cdot C_1}{C_1^2(d-1)}.$$
+		$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \inf_{C_i}{\frac{L\cdot C_i}{b_i}}.$$
+This implies
+                $$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \frac{L\cdot C_i}{b_i}.$$ for each $i$. \\
+This gives, after adding over all $i$
+		$$(\triangle) : \quad (L \cdot D)\sum b_i < \left(\sum_{p \in \mathcal{P}} m_{p}(D)\right)\sum L\cdot C_i.$$
+		By B\'ezout's theorem, we obtain
+		\begin{eqnarray*}
+		D\cdot C_i &\geq& m_{p}(D) \cdot m_{p\in C_i \cap \mathcal{C}}C_i  \\
+		&=& m_{p}(D)\cdot b_i.
+		\end{eqnarray*}
+for each $i$. Summing over all $i$, we get	
+		\begin{eqnarray*}
+		 D\cdot (C_{1}+ \ldots + C_{d}) &\geq& \sum_{p \in \mathcal{P}}m_{p}(D)\cdot m_{p}(C_{1}+ \ldots + C_{d})\\
+		&\stackrel{(*)}{\geq}& 2\sum_{p \in \mathcal{P}} m_{p}(D) \\
+		&\stackrel{(\triangle)}{>}& \frac{2(L \cdot D)\sum b_i}{\sum L\cdot C_i},
+		\end{eqnarray*}
+		where $(*)$ comes from the fact that all the singular points of $C_{1}+ \ldots + C_{d}$ are at least double points. Now we use the nefness 
+		of $\frac{d\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L-C_i$ and note the following  inequality: 
+		\[
+		\frac{d\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L\cdot D \geq D\cdot C_i.
+		\] 
+		After adding over all $i=1,...,d$, this leads to the following, 
+		\begin{eqnarray*}
+			\frac{d^2\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L\cdot D &\geq&  D\cdot (C_{1}+ \ldots + C_{d}) > \frac{2(L \cdot D)\sum b_i}{\sum L\cdot C_i} \\
+			%\Rightarrow \frac{d^2C_1^2}{d-1} &>& 2(d-1)C_1^2 \quad \quad \text{(since $L$ is ample)} \\
+			\Rightarrow \left(\frac{d}{d-1} \right)^2 &>& 2 \quad \quad \text{(since $\sum b_i > 0$ and $L$ is ample)}.
+		\end{eqnarray*}
+		This is a contradiction, since $d\geq 4$.
+	\end{proof}
+
 	
 	\begin{theorem}
 		\label{prop:star} Let $X$ be a nonsingular projective surface and let $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$ be a star configuration of curves on $X$ with $d \geq 4$ such that each $ C_i$ is linearly equivalent to a fixed divisor $A$ on $X$. Let $L$ be an ample line bundle on $X$
@@ -310,6 +356,8 @@ This gives
 		\end{eqnarray*}
 		This is a contradiction, since $d\geq 4$.
 	\end{proof}
+
+
 	\begin{corollary}
 		\label{coro:star}
 		If $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$ is a star configuration on a nonsingular projective surface $X$ with $d \geq 4$  and $L$ is an ample line bundle  on $X$ such that $ C_i \in |mL|$ for all $i$ and a positive integer $m>0$, then 
