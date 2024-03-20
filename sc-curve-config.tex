@@ -223,8 +223,6 @@ In this section, we will first prove a result computing Seshadri constants for a
 
 
 We first introduce some notation. 
-
-
 	%\begin{definition}
 		Let $\mathcal{C}$ be a transversal arrangement of curves on a smooth projective surface $X$. 
   
@@ -249,27 +247,13 @@ The following question is a generalization of Question \ref{qn1} to curve arrang
 
 By \cite[Example 3.5]{JP}, the above question has a negative answer for the Hesse arrangement of conics 
 in $\mathbb{P}^2$. However it is open for line arrangements in $\mathbb{P}^2$. 
-It is interesting to study the situations in which it is true on arbitrary surfaces. 
+It is interesting to study the situations in which it is true on arbitrary surfaces. Our main theorem answers this question positively under an additional nefness condition. 
 
 
-For an arbitrary curve arrangement $\mathcal{C}$ satisfying Assumption \ref{star1}, the base constant is at most 
-$C_1^2(d-1)$. So the following question arises naturally. 
 
-	\begin{question}\label{QuestM}
-		Let $\mathcal{C} =\{C_1,C_2, \ldots ,C_d\}$ be a transversal arrangement of curves on a smooth projective surface $X$
-		satisfying Assumption \ref{star1}. Let  ${\rm Sing}(\mathcal{C})$ denote the singular locus of $\mathcal{C}$ and let $L$ be an ample line bundle on $X$. Is it true that
-		\begin{equation}\label{ques}
-			\varepsilon(X, L,{\rm Sing}(\mathcal{C})) \geq \frac{L \cdot C_1}{C_1^2(d-1)} ?	
-		\end{equation}	
-		
-	\end{question}	
-	
-	For star arrangements, the base constant is exactly equal to $C_1^2(d-1)$. We answer this question positively in Corollary \ref{prop:star} for some arrangement. 
  
 	
-The following is our main theorem. It gives the value of Seshadri constant for an arbitrary transversal configuration 
-$\mathcal{C} = \{C_1, \dots, C_d\}$
-under a nefness condition. 
+%The following is our main theorem. It gives the value of Seshadri  constant for an arbitrary transversal configuration  $\mathcal{C} = \{C_1, \dots, C_d\}$ under a nefness condition. 
 
 
 
@@ -322,6 +306,12 @@ for each $i$. Summing over all $i$, we get
 		This is a contradiction, since $d\geq 4$.
 	\end{proof}
 
+\begin{remark}
+Several authors have studied multi-point Seshadri constants on surfaces; for a sample of results, see \cite{B,HM, HR, PR, RR, SS}. 
+Many of these results consider general points. 
+Theorem \ref{main-theorem} gives a computation of Seshadri constants at \textit{special} points. 
+\end{remark}
+
 
 Now we will work with configurations satisfying some additional assumptions. More specifically, we will make the following assumption. 
 
@@ -343,27 +333,9 @@ Now we will work with configurations satisfying some additional assumptions. Mor
 Recall that the arrangements we study in this paper are all connected. Since each curve in $\mathcal{C}$ is assumed to be linearly equivalent to a fixed divisor $A$, 
 Assumption \ref{star1} implies in particular that $C_i\cdot C_j > 0$ for all $1\le i,j \le d$.  
  \end{remark}
-	\begin{definition}
-		Let $\mathcal{C}$ be a transversal arrangement of curves on a smooth projective surface $X$
-		satisfying Assumption \ref{star1}. Then we define the \emph{base constant} of $\mathcal{C}$ as 
-		$${\rm bs}(\mathcal{C}) := {\rm max} \{t \, | \, t = \# \, C_{i} \cap {\rm Sing}(\mathcal{C}), \, C_{i} \in \mathcal{C}\},$$
-		i.e., ${\rm bs}(\mathcal{C})$ is equal to the maximum number of singular points  of $\mathcal{C}$ that are contained in a single curve $C_{i} \in \mathcal{C}$.
-	\end{definition}
-
-The following question is a generalization of Question \ref{qn1} to curve arrangements on arbitrary surfaces. 
+	
 
 
-	\begin{question}\label{question}
-		Let $\mathcal{C} =\{C_1,C_2, \ldots ,C_d\}$ be a transversal arrangement of curves on a smooth projective surface $X$
-		satisfying Assumption \ref{star1}. Let $L$ be an ample line bundle on $X$. Is it true that
-		\begin{equation*}\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \frac{L \cdot C_1}{{\rm bs}(\mathcal{C})}?
-		\end{equation*}
-	\end{question}
-
-
-By \cite[Example 3.5]{JP}, the above question has a negative answer for the Hesse arrangement of conics 
-in $\mathbb{P}^2$. However it is open for line arrangements in $\mathbb{P}^2$. 
-It is interesting to study the situations in which it is true on arbitrary surfaces. 
 
 
 For an arbitrary curve arrangement $\mathcal{C}$ satisfying Assumption \ref{star1}, the base constant is at most 
@@ -378,13 +350,13 @@ $C_1^2(d-1)$. So the following question arises naturally.
 		
 	\end{question}	
 	
-	For star arrangements, the base constant is exactly equal to $C_1^2(d-1)$. We answer this question positively in Corollary \ref{prop:star} for some arrangement. 
+	For star arrangements, the base constant is exactly equal to $C_1^2(d-1)$. We answer this question positively in the following  corollaries for some arrangements. 
  
 
 
 
  
-We now prove some corollaries for star arrangements where all the curves are linearly equivalent to a fixed divisor. This answers Question \ref{QuestM} in the affirmative. 
+%We now prove some corollaries for star arrangements where all the curves are linearly equivalent to a fixed divisor. This answers Question \ref{QuestM} in the affirmative. 
 	
 	\begin{corollary}
 		\label{prop:star} Let $X$ be a nonsingular projective surface and let $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$ be a star configuration of curves on $X$ with $d \geq 4$ such that each $ C_i$ is linearly equivalent to a fixed divisor $A$ on $X$. Let $L$ be an ample line bundle on $X$
@@ -403,14 +375,11 @@ We now prove some corollaries for star arrangements where all the curves are lin
 		$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \frac{1}{m(d-1)}.$$
 	\end{corollary}
 
-\begin{remark}
-Several authors have studied multi-point Seshadri constants on surfaces; for a sample of results, see \cite{B,HM, HR, PR, RR, SS}. 
-Many of these results consider general points. 
-Theorem \ref{prop:star} gives a computation of Seshadri constants at \textit{special} points. 
-\end{remark}
 
 
-The proof of Theorem \ref{prop:star} shows that for an arbitrary arrangement, not necessarily a star arrangement, we have the following lower and upper bounds for the Seshadri constants. 
+
+The proof of Theorem \ref{main-theorem} shows that for arrangements
+satisfying Assumption \ref{star1}, we have the following lower and upper bounds for the Seshadri constants. 
 
 
 \begin{corollary}\label{cor-main}
@@ -421,7 +390,12 @@ Let $X$ be a nonsingular projective surface and let $\mathcal{C} = \{C_{1}, \ldo
 $$\frac{L\cdot C_1}{C_1^2(d-1)} \le \varepsilon(X, L,{\rm Sing}(\mathcal{C})) \le \frac{L \cdot C_1}{{\rm bs} (\mathcal{C})}  .$$
 \end{corollary} 
 \begin{proof}
-The inequality $\frac{L\cdot C_1}{C_1^2(d-1)} \le \varepsilon(X, L,{\rm Sing}(\mathcal{C}))$ follows from the proof of Theorem \ref{prop:star}. Note that for any reduced and irreducible curve $D$ which is not in $\mathcal{C}$, we showed that the Seshadri ratio is at least $\frac{L\cdot C_1}{C_1^2(d-1)}$ and this part does not use the fact that $\mathcal{C}$ is a star arrangement. 
+
+Note that the hypotheses of Theorem \ref{main-theorem} hold here. 
+ For any reduced and irreducible curve $D$ which is not in $\mathcal{C}$, we showed in the proof of Theorem \ref{main-theorem}
+that the Seshadri ratio is at least $\frac{L\cdot C_1}{C_1^2(d-1)}$. 
+So we obtain $\frac{L\cdot C_1}{C_1^2(d-1)} \le \varepsilon(X, L,{\rm Sing}(\mathcal{C}))$. 
+
 
 For curves in $\mathcal{C}$, the least Seshadri ratio is  $\frac{L \cdot C_1}{\rm{bs} (\mathcal{C})}$. 
 Since we always have ${\rm bs} (\mathcal{C}) \le C_1^2(d-1)$, the proof is complete. 
@@ -436,12 +410,19 @@ Consider the Hesse arrangement $\mathcal{C} = \{C_1, \ldots, C_{12}\}$  of conic
 which has 21 singular points.  The base constant of $\mathcal{C}$  is 8.  
  The Seshadri constant of $L = \mathcal{O}_{\mathbb{P}^2}(1)$ at these 21 points is known to be $\frac{1}{5}$; see \cite[Example 3.5]{JP}. 
 
+We note that the nefness assumption of Theorem \ref{main-theorem} does not hold here. Indeed, $b_i = 8$ for each $1 \le i \le 12$. So the divisor 
+$\left(\frac{12(b_1+\dots + b_{12})}{11*11*24}\right)L - C_1$ is not nef because 
+$b_1+\dots + b_{12} < 4*11^2$. 
 
+However, Corollary \ref{cor-main} does apply in this case. 
 It is easy to see that $\frac{24}{11}L - C_1$ is nef. 
 Then Corollary \ref{cor-main} implies
 $$\frac{1}{22} <  \varepsilon(\mathbb{P}^2, L,{\rm Sing}(\mathcal{C})) = \frac{1}{5}<  \frac{1}{4}.$$
 
-This shows that the inequalities in Corollary \ref{cor-main} are strict, in general. In particular,  Theorem \ref{prop:star} does not hold in this case. Note that $\mathcal{C}$ is not a star arrangement.   
+This shows that the inequalities in Corollary \ref{cor-main} are strict, in general. In particular,  Corollary \ref{prop:star} does not hold in this case. Note that $\mathcal{C}$ is not a star arrangement.   
+
+
+
 
 
 \end{example}
