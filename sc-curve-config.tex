@@ -103,7 +103,7 @@ Tirupati, Andhra Pradesh, INDIA – 517507.}
 \date{\today}
 
 	\begin{abstract}
-	Let $X$ be a complex nonsingular projective surface and let $L$ be an ample line bundle on $X$. We study multi-point Seshadri constants of $L$ at singular points of certain connected arrangements of curves on $X$. We pose some questions about such Seshadri constants and prove some results in the case of star arrangements of curves. We also study the configurational Seshadri constants for curve arrangements on surfaces and compare them with the usual Seshadri constants. We give several examples illustrating the properties that we study. 
+	Let $X$ be a complex nonsingular projective surface and let $L$ be an ample line bundle on $X$. We study multi-point Seshadri constants of $L$ at singular points of certain connected arrangements of curves on $X$. We pose some questions about such Seshadri constants and prove results in many cases, including star arrangements of curves. We also study the configurational Seshadri constants for curve arrangements on surfaces and compare them with the usual Seshadri constants. We give several examples illustrating the properties that we study. 
 	\end{abstract}
 	
 		\maketitle
@@ -146,7 +146,7 @@ Tirupati, Andhra Pradesh, INDIA – 517507.}
 	question was posed in \cite{Pok}. 
 	
 		\begin{question}\label{qn1}
-		Let $x_1, \cdots, x_r \subset \mathbb{P}^2$ be the set of singular points in a configuration of lines  which is not a pencil of lines. Let $k$ denote the maximum number of points which lie on a line. Is it true that 
+		Let $x_1, \cdots, x_r \in \mathbb{P}^2$ be the set of singular points in a configuration of lines  which is not a pencil of lines. Let $k$ denote the maximum number of points which lie on a line. Is it true that 
 		$$\varepsilon(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2}(1),x_1,\ldots,x_r)= \frac{1}{k} ? $$
 	\end{question}
 	In \cite{Pok}, the author gives specific examples like line arrangements satisfying \textit{Hirzebruch's property} and star arrangement of $d$ lines in $\mathbb{P}^2$ where there is an affirmative answer to the above question. 
@@ -201,7 +201,10 @@ We recall below the basic definitions that we require in this paper.
 	
 %\textcolor{blue}{Give some motivation for star arrangements.}
 
-The main configurations considered in this paper are the \textit{star configurations}. We make the following definition: 
+One class of arrangements studied in this paper are 
+ natural analogues of the classical star arrangements of lines on $\mathbb{P}^2$. 
+We make the following definition. 
+
 \begin{definition} Let $X$ be a nonsingular projective surface.  
 A transversal arrangement of curves $\mathcal{C}$ on $X$
 		 is called a \emph{star  configuration} if the only intersection points are double points.
@@ -212,9 +215,12 @@ If $\mathcal{C}= \{C_1,C_2, \ldots ,C_d\}$ is a star arrangement and $C_i$ are l
 Star configurations of lines in $\mathbb{P}^2$, and more generally of hyperplanes in $\mathbb{P}^n$, are extensively studied; 
 see \cite{CV,GHM, JP}, for some results. 	
 	
-In Section \ref{main}, we prove our main result (Theorem \ref{prop:star}) for star arrangements of curves on arbitrary surfaces. 
+In Section \ref{main}, we prove one of our main results (Theorem \ref{main-theorem})
+for a transversal arrangement $\mathcal{C}$ of curves on a smooth projective surface under a nefness condition. We will then assume that all curves in $\mathcal{C}$ are linearly equivalent to a fixed divisor and prove some results for such configurations using Theorem \ref{main-theorem}. The main result in this set-up is Corollary \ref{prop:star}.  
+
 In Section \ref{ruled}, we consider some examples on ruled surfaces. In Section \ref{compare}, we compare the usual Seshadri constants with configurational Seshadri constants. In Section \ref{bounds}, we give lower bounds for configurational Seshadri constants for curve arrangements on surfaces. 
-Finally, we give an example of a computation of multi-point Seshadri constant at the singular locus of an arrangement of curves on a K3 surface. 
+
+Finally, we give an example (Example \ref{K3}) of a computation of multi-point the Seshadri constant at the singular locus of an arrangement of curves on a K3 surface. In this example, the nefness hypothesis of Theorem \ref{main-theorem} is not true but the conclusion about the Seshadri constant still holds. 
 	
 	\section{Seshadri constants for certain transversal curve arrangements}\label{main}	
 	%\subsection{General results for any surface}
@@ -240,7 +246,7 @@ The following question is a generalization of Question \ref{qn1} to curve arrang
 	\begin{question}\label{question}
 		Let $\mathcal{C} =\{C_1,C_2, \ldots ,C_d\}$ be a transversal arrangement of curves on a smooth projective surface $X$. Let $L$ be an ample line bundle on $X$. Is it true that
 		\begin{equation*}
-  \varepsilon(X, L,{\rm Sing}(\mathcal{C})) =  \min_{i}\left\{\frac{L\cdot C_i}{b_i}\right\}?
+  \varepsilon(X, L,{\rm Sing}(\mathcal{C})) =  \min_{1\le i \le d}\left\{\frac{L\cdot C_i}{b_i}\right\}?
 		\end{equation*}
 	\end{question}
 
@@ -266,27 +272,30 @@ It is interesting to study the situations in which it is true on arbitrary surfa
 		Let $L$ be an ample line bundle on $X$
 		such that  $\frac{d\sum b_i}{(d-1)^2(\sum L\cdot C_i)}L-C_i$ is nef for each $i$.   Then 
 		%$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \inf_{C_i}{\frac{L\cdot C_i}{C_i^2(d-1)}}.$$
-		$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \inf_{C_i}{\{\frac{L\cdot C_i}{b_i}\}}.$$
+		$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \min_{1\le i\le d}
+  {\left\{\frac{L\cdot C_i}{b_i}\right\}}.$$
 	\end{theorem}
 	\begin{proof}
-	 Let $\mathcal{P} = \{p_{1}, \ldots, p_{s}\}$ be the singular locus of  $\mathcal{C}$. Note that $p_{1}, \ldots, p_{s}$ are all double points of 
-	  $\mathcal{C}$. Exactly $b_i$ of these points lie on $C_i$. So the Seshadri ratio computed by $C_i$ is precisely 
+	 Let $\mathcal{P} = \{p_{1}, \ldots, p_{s}\}$ be the singular locus of  $\mathcal{C}$. For each $i$, exactly $b_i$ points in $\mathcal{P}$  lie on $C_i$. Since each $C_i$ is smooth, the Seshadri ratio computed by $C_i$ is precisely 
 	  $ \frac{L\cdot C_i}{b_i}$. %Note that the same ratio is also contributed by each of the curves $C_2,\ldots, C_d$. 
 	 
-	 
-	 Suppose that there exists an irreducible and reduced curve $D$, different from $C_{i}$ for $i \in \{1,\ldots, d\}$, having multiplicity $m_{p}(D)$ at each point $p \in \mathcal{P}$ such that
+
+  We will now show that the Seshadri ratio given by any curve $D$ not in $\mathcal{C}$ is at least $\min_{1\le i\le d}
+  {\left\{\frac{L\cdot C_i}{b_i}\right\}}$. 
+  
+	 Suppose that there exists an irreducible and reduced curve $D\notin \mathcal{C}$ having multiplicity $m_{p}(D)$ at each point $p \in \mathcal{P}$ such that $D \cap \mathcal{P} \ne \emptyset$ and 
 		%$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \frac{L\cdot C_1}{C_1^2(d-1)}.$$
-		$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \inf_{C_i}{\frac{L\cdot C_i}{b_i}}.$$
-This implies
-                $$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \frac{L\cdot C_i}{b_i}.$$ for each $i$. \\
-This gives, after adding over all $i$
+		$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \min_{1\le i \le d}\left\{\frac{L\cdot C_i}{b_i}\right\}.$$
+So 
+                $$b_i(L \cdot D)  < (L\cdot C_i) \sum_{p \in \mathcal{P}} m_{p}(D).$$ for each $i$. 
+Adding over all $i$, we have 
 		$$(\triangle) : \quad (L \cdot D)\sum b_i < \left(\sum_{p \in \mathcal{P}} m_{p}(D)\right)\sum L\cdot C_i.$$
-		By B\'ezout's theorem, we obtain
-		\begin{eqnarray*}
-		D\cdot C_i &\geq& m_{p}(D) \cdot m_{p\in C_i \cap \mathcal{C}}C_i  \\
-		&=& m_{p}(D)\cdot b_i.
-		\end{eqnarray*}
-for each $i$. Summing over all $i$, we get	
+		By B\'ezout's theorem applied to $D$ and $C_1+\dots+C_d$, we obtain
+		%\begin{eqnarray*}
+		%D\cdot C_i &\geq& m_{p}(D) \cdot m_{p\in C_i \cap \mathcal{C}}C_i  \\
+		%&=& m_{p}(D)\cdot b_i.
+		%\end{eqnarray*}
+%for each $i$. Summing over all $i$, we get	
 		\begin{eqnarray*}
 		 D\cdot (C_{1}+ \ldots + C_{d}) &\geq& \sum_{p \in \mathcal{P}}m_{p}(D)\cdot m_{p}(C_{1}+ \ldots + C_{d})\\
 		&\stackrel{(*)}{\geq}& 2\sum_{p \in \mathcal{P}} m_{p}(D) \\
@@ -313,7 +322,7 @@ Theorem \ref{main-theorem} gives a computation of Seshadri constants at \textit{
 \end{remark}
 
 
-Now we will work with configurations satisfying some additional assumptions. More specifically, we will make the following assumption. 
+Now we will work with configurations satisfying some additional assumptions. Specifically, we will make the following assumption. 
 
 	\begin{assumption}\label{star1}
 		Let $\mathcal{C}=\{C_1,C_2, \ldots ,C_d\}$, $d\geq 4$ be a (connected) 
@@ -350,7 +359,7 @@ $C_1^2(d-1)$. So the following question arises naturally.
 		
 	\end{question}	
 	
-	For star arrangements, the base constant is exactly equal to $C_1^2(d-1)$. We answer this question positively in the following  corollaries for some arrangements. 
+	For star arrangements, the base constant is exactly equal to $C_1^2(d-1)$. We answer the above question positively for some arrangements  in the following  corollaries 
  
 
 
@@ -459,7 +468,7 @@ $$\frac{1}{3n-1} \le \varepsilon(X, L,{\rm Sing}(\mathcal{C}_n)) \le \frac{1}{n+
 
 
 
-	We now construct examples such that the conclusion of Theorem \ref{prop:star} holds, even without the nefness condition in the hypothesis. We construct these examples by obtaining transversal arrangement of curves on rational ruled surfaces coming from line arrangements in $\mathbb{P}^2.$ 
+	We now construct examples such that the conclusion of Corollary \ref{prop:star} holds, even without the nefness condition in the hypothesis. We construct these examples by obtaining transversal arrangement of curves on rational ruled surfaces coming from line arrangements in $\mathbb{P}^2.$ 
 
 \subsection{Examples on ruled surfaces}\label{ruled}	
 	
@@ -491,11 +500,11 @@ $$\frac{1}{3n-1} \le \varepsilon(X, L,{\rm Sing}(\mathcal{C}_n)) \le \frac{1}{n+
 	each curve in $\mathcal{C}$ is in the class $(1,e)$ and has
 	self-intersection $e$.
 	
-	In the next example, the conclusion of Theorem \ref{prop:star} holds, even without the nefness condition in the hypothesis. 
+	In the next example, the conclusion of Corollary \ref{prop:star} holds, even without the nefness condition in the hypothesis. 
 	\begin{example}\label{nef}
 		Consider a transversal arrangement $\mathcal{C} = \{C_{1}, \ldots, C_{5}\}$ of curves on a rational ruled surface $X=X_e$ with invariant $e=2$ such that $ C_i \in |C_0+2f|$ and such that the only intersection points are ordinary double points. This configuration can be obtained as pullback of a star configuration of lines from $\mathbb{P}^2$, using the above construction. Note that each $C_i$ contains exactly $(5-1)e=8$ double points from the arrangement.
 		
- Let $L=C_0+3f$ be an ample line bundle on $X.$ Then we have $$(5C_1^2/4L\cdot C_1))L-C_1= \frac{1}{6}(-C_0+3f),$$ which is not nef as $(-C_0+3f)\cdot f = -1 < 0.$ Hence the nefness hypothesis in Theorem \ref{prop:star} fails. 
+ Let $L=C_0+3f$ be an ample line bundle on $X.$ Then we have $$(5C_1^2/4L\cdot C_1))L-C_1= \frac{1}{6}(-C_0+3f),$$ which is not nef as $(-C_0+3f)\cdot f = -1 < 0.$ Hence the nefness hypothesis in Corollary \ref{prop:star} fails. 
 		
 		We now verify that 
 		$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \frac{L\cdot C_1}{4C_1^2}=\frac{3}{8}.$$
@@ -557,7 +566,7 @@ $$\frac{1}{3n-1} \le \varepsilon(X, L,{\rm Sing}(\mathcal{C}_n)) \le \frac{1}{n+
 	$$\varepsilon_\mathcal{C}(L) \geq \varepsilon(X, L,{\rm Sing}(\mathcal{C})).$$
 	In general, this inequality is strict. 
 	\begin{example}
-		In Theorem \ref{prop:star}, we considered a \emph{star} configuration $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$ with $d \geq 4$ such that $ C_i \in |A|$ for all $i$, where $A$ was a fixed divisor on $X$. We saw that for an ample line bundle $L$  on $X$, if 
+		In Corollary \ref{prop:star}, we considered a \emph{star} configuration $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$ with $d \geq 4$ such that $ C_i \in |A|$ for all $i$, where $A$ was a fixed divisor on $X$. We saw that for an ample line bundle $L$  on $X$, if 
 		$\frac{dC_1^2}{(d-1)(L\cdot C_1)}L-C_1$ is nef, the Seshadri constant is given by
 		$$\varepsilon(X, L,{\rm Sing}(\mathcal{C})) = \frac{L\cdot C_1}{C_1^2(d-1)}.$$
 		
@@ -730,12 +739,13 @@ $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$
 		\end{equation*}		
 	\end{proof}
 
-We end with an example of a configuration of lines on a K3 surface in $\mathbb{P}^3$. Though it does
-not fit in the situation studied in this paper (since the curves in the arrangement are not
-linearly equivalent to each other), it gives an interesting computation of a multi-point Seshadri
-constant on a K3 surface.
+We end with an example of a configuration of lines on a K3 surface in $\mathbb{P}^3$. In this example, the nefness hypothesis of Theorem \ref{main-theorem} is not satisfied, but the conclusions hold. 
+%Though it does
+%not fit in the situation studied in this paper (since the curves in the arrangement are not
+%linearly equivalent to each other), it gives an interesting computation of a multi-point Seshadri
+%constant on a K3 surface.
 
-\begin{example}
+\begin{example}\label{K3}
 		Let $X \subset \mathbb{P}^3$ be a Fermat quartic defined by the vanishing locus of $x_0^4 + x_1^4 + x_2^4 + x_3^4$, where $x_0, \ldots, x_3$ are the coordinates of $\mathbb{P}^3$. 
 		Then $X$ contains the following 48 lines; 
   %(denoted by $l_{\alpha, \beta}$); 
@@ -780,11 +790,16 @@ Using a similar argument, one can see that there are 24 sets of 4 lines each suc
 		the arrangement $\mathcal{L}$.  This arrangement has 216 singular points. So we have 
 		$$\varepsilon(X, \mathcal{O}_X(1), \text{Sing}(\mathcal{L})) \le \sqrt{\frac{4}{216}} \sim 0.136.$$
 In fact, we claim that
-		\[
+		\begin{equation}\label{2.22}
 		\varepsilon(X, \mathcal{O}_X(1), \text{Sing}(\mathcal{L})) = \frac{1}{10}.
-		\]
+	\end{equation}
 
-  We first show that the Seshadri ratio computed by a line in $\mathcal{L}$ is $\frac{1}{10}$. 
+Note that Theorem \ref{main-theorem} predicts that the Seshadri constant is indeed $\frac{1}{10}$, though that theorem cannot be applied here. This is because 
+$d=48, b_1=\dots = b_{48} = 10$ and $L\cdot l_i = 1$ for every $i$. The divisor
+in question is not nef, as can be seen by intersecting with $l_i$. 
+
+
+  To prove \eqref{2.22}, we first show that the Seshadri ratio computed by a line in $\mathcal{L}$ is $\frac{1}{10}$. 
    As mentioned above, every line in $\mathcal{L}$ contains exactly 10 singular points of $\mathcal{L}$. 
    Note that each line $l$ in $\mathcal{L}$ has degree 1 in $\mathbb{P}^3$.
    So for every line $l \in \mathcal{L}$, 
@@ -829,7 +844,7 @@ Here $\text{Sing}_2(\mathcal{L})$ and $\text{Sing}_4(\mathcal{L})$ denote the se
 		\[
 		\frac{\mathcal{O}_X(1) \cdot C}{\sum\limits_{p \in \text{Sing}(\mathcal{L})} \text{mult}_{p}C} = \frac{\text{deg}(C)}{ \sum\limits_{p \in\text{Sing}(\mathcal{L})} \text{mult}_{p}C} \geq \frac{1}{6} > \frac{1}{10}.
 		\]
-		This completes the proof of the claim.
+		This completes the proof of the equality \eqref{2.22}.
 
 		
 		
