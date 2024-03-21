@@ -220,7 +220,7 @@ for a transversal arrangement $\mathcal{C}$ of curves on a smooth projective sur
 
 In Section \ref{ruled}, we consider some examples on ruled surfaces. In Section \ref{compare}, we compare the usual Seshadri constants with configurational Seshadri constants. In Section \ref{bounds}, we give lower bounds for configurational Seshadri constants for curve arrangements on surfaces. 
 
-Finally, we give an example (Example \ref{K3}) of a computation of multi-point the Seshadri constant at the singular locus of an arrangement of curves on a K3 surface. In this example, the nefness hypothesis of Theorem \ref{main-theorem} is not true but the conclusion about the Seshadri constant still holds. 
+Finally, we give an example (Example \ref{K3}) of a computation of the multi-point Seshadri constant at the singular locus of an arrangement of curves on a K3 surface. In this example, the nefness hypothesis of Theorem \ref{main-theorem} is not true but the conclusion about the Seshadri constant still holds. 
 	
 	\section{Seshadri constants for certain transversal curve arrangements}\label{main}	
 	%\subsection{General results for any surface}
@@ -232,7 +232,7 @@ We first introduce some notation.
 	%\begin{definition}
 		Let $\mathcal{C}$ be a transversal arrangement of curves on a smooth projective surface $X$. 
   
-  For each $1\le i \le d$, let $b_i =  \# \, C_{i} \cap {\rm Sing}(\mathcal{C})$. Since our arrangement is connected, $b_i >0$ for all $i$.
+  For each $1\le i \le d$, let $b_i =  \# \, C_{i} \cap {\rm Sing}(\mathcal{C})$. Since $\mathcal{C}$ is connected, $b_i >0$ for all $i$.
    We define the \emph{base constant} of $\mathcal{C}$ as 
    $$\text{bs}(\mathcal{C}) = \max\{b_1,\dots, b_d\},$$ i.e., 
 $\text{bs}(\mathcal{C})$		
@@ -252,7 +252,7 @@ The following question is a generalization of Question \ref{qn1} to curve arrang
 
 
 By \cite[Example 3.5]{JP}, the above question has a negative answer for the Hesse arrangement of conics 
-in $\mathbb{P}^2$. However it is open for line arrangements in $\mathbb{P}^2$. 
+in $\mathbb{P}^2$; see Example \ref{hesse}. However it is open for line arrangements in $\mathbb{P}^2$. 
 It is interesting to study the situations in which it is true on arbitrary surfaces. Our main theorem below answers this question positively under an additional nefness condition. 
 
 
@@ -286,10 +286,11 @@ It is interesting to study the situations in which it is true on arbitrary surfa
 	 Suppose that there exists an irreducible and reduced curve $D\notin \mathcal{C}$ having multiplicity $m_{p}(D)$ at each point $p \in \mathcal{P}$ such that $D \cap \mathcal{P} \ne \emptyset$ and 
 		%$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \frac{L\cdot C_1}{C_1^2(d-1)}.$$
 		$$\frac{L \cdot D}{\sum_{p \in \mathcal{P}} m_{p}(D)} < \min_{1\le i \le d}\left\{\frac{L\cdot C_i}{b_i}\right\}.$$
-So 
-                $$b_i(L \cdot D)  < (L\cdot C_i) \sum_{p \in \mathcal{P}} m_{p}(D).$$ for each $i$. 
+So for each $1 \le i \le d$, we have 
+                $$b_i(L \cdot D)  < (L\cdot C_i) \sum_{p \in \mathcal{P}} m_{p}(D).$$ 
+                
 Adding over all $i$, we have 
-		$$(\triangle) : \quad (L \cdot D)\sum b_i < \left(\sum_{p \in \mathcal{P}} m_{p}(D)\right)\sum L\cdot C_i.$$
+		$$(\triangle) : \quad (L \cdot D)\sum_{i=1}^d b_i < \left(\sum_{p \in \mathcal{P}} m_{p}(D)\right)\sum_{i=1}^d L\cdot C_i.$$
 		By B\'ezout's theorem applied to $D$ and $C_1+\dots+C_d$, we obtain
 		%\begin{eqnarray*}
 		%D\cdot C_i &\geq& m_{p}(D) \cdot m_{p\in C_i \cap \mathcal{C}}C_i  \\
@@ -348,7 +349,8 @@ Assumption \ref{star1} implies in particular that $C_i\cdot C_j > 0$ for all $1\
 
 
 For an arbitrary curve arrangement $\mathcal{C}$ satisfying Assumption \ref{star1}, the base constant is at most 
-$C_1^2(d-1)$. So the following question arises naturally. 
+$C_1^2(d-1)$. So the following question arises naturally from
+Question \ref{question}. 
 
 	\begin{question}\label{QuestM}
 		Let $\mathcal{C} =\{C_1,C_2, \ldots ,C_d\}$ be a transversal arrangement of curves on a smooth projective surface $X$
@@ -374,7 +376,7 @@ $C_1^2(d-1)$. So the following question arises naturally.
 	\end{corollary}
 
  \begin{proof}
-Under the given hypotheses, we have $b_i = C_1^2(d-1)$  and $L\cdot C_i = L\cdot L_1$
+Under the given hypotheses, we have $b_i = C_1^2(d-1)$  and $L\cdot C_i = L\cdot C_1$
 for all $i$. 
 The proof is now immediate from Theorem \ref{main-theorem}.    
  \end{proof} This immediately gives the following. 
@@ -390,7 +392,7 @@ The proof is now immediate from Theorem \ref{main-theorem}.
 
 
 The proof of Theorem \ref{main-theorem} can be modified to show that for arrangements
-satisfying Assumption \ref{star1} which are not star arrangements, we still have the following lower and upper bounds for the Seshadri constants. 
+satisfying Assumption \ref{star1} which are not necessarily star arrangements, we still have the following lower and upper bounds for the Seshadri constants. 
 
 
 \begin{corollary}\label{cor-main}
@@ -410,7 +412,7 @@ $$ \frac{L\cdot C_1}{C_1^2(d-1)} \le \frac{L \cdot D}{\sum_{p \in \mathcal{P}} m
 %So we obtain $\frac{L\cdot C_1}{C_1^2(d-1)} \le \varepsilon(X, L,{\rm Sing}(\mathcal{C}))$. 
 
 Indeed, suppose that the above inequality does not hold. 
-As in the proof of Theoerem \ref{main-theorem}, B\'ezout's theorem applied to $D$ and $C_1+\dots+C_d$ gives
+As in the proof of Theorem \ref{main-theorem}, B\'ezout's theorem applied to $D$ and $C_1+\dots+C_d$ gives
 		
 
 $$		 D\cdot (C_{1}+ \ldots + C_{d}) \ge  
@@ -428,7 +430,7 @@ Since we always have ${\rm bs} (\mathcal{C}) \le C_1^2(d-1)$, the proof is compl
 
 
 
-\begin{example}
+\begin{example}\label{hesse}
 Consider the Hesse arrangement $\mathcal{C} = \{C_1, \ldots, C_{12}\}$  of conics in $\mathbb{P}^2$
 which has 21 singular points.  The base constant of $\mathcal{C}$  is 8.  
  The Seshadri constant of $L = \mathcal{O}_{\mathbb{P}^2}(1)$ at these 21 points is known to be $\frac{1}{5}$; see \cite[Example 3.5]{JP}. 
@@ -753,7 +755,7 @@ $\mathcal{C} = \{C_{1}, \ldots, C_{d}\}$
 		\end{equation*}		
 	\end{proof}
 
-We end with an example of a configuration of lines on a K3 surface in $\mathbb{P}^3$. In this example, the nefness hypothesis of Theorem \ref{main-theorem} is not satisfied, but the conclusions hold. 
+We end with an example of a configuration of lines on a K3 surface in $\mathbb{P}^3$. In this example, the nefness hypothesis of Theorem \ref{main-theorem} is not satisfied, but the conclusion holds. 
 %Though it does
 %not fit in the situation studied in this paper (since the curves in the arrangement are not
 %linearly equivalent to each other), it gives an interesting computation of a multi-point Seshadri
@@ -808,9 +810,9 @@ In fact, we claim that
 		\varepsilon(X, \mathcal{O}_X(1), \text{Sing}(\mathcal{L})) = \frac{1}{10}.
 	\end{equation}
 
-Note that Theorem \ref{main-theorem} predicts that the Seshadri constant is indeed $\frac{1}{10}$, though that theorem cannot be applied here. This is because 
-$d=48, b_1=\dots = b_{48} = 10$ and $L\cdot l_i = 1$ for every $i$. The divisor
-in question is not nef, as can be seen by intersecting with $l_i$. 
+Note that Theorem \ref{main-theorem} predicts that the Seshadri constant is indeed $\frac{1}{10}$, though  it cannot be applied here. This is because 
+$d=48, b_i = 10$ and $L\cdot l_i = 1$ for every $i$. So the divisor which appears in the statement of Theorem \ref{main-theorem}
+is not nef, as can be seen by intersecting with $l_i$. 
 
 
   To prove \eqref{2.22}, we first show that the Seshadri ratio computed by a line in $\mathcal{L}$ is $\frac{1}{10}$. 
@@ -864,7 +866,7 @@ Here $\text{Sing}_2(\mathcal{L})$ and $\text{Sing}_4(\mathcal{L})$ denote the se
 		
 	\end{example}
 
- \subsection*{Acknowledgements} We thank the referee for a careful reading of the paper, pointing out some corrections and giving several useful comments which substantially improved the paper. The first author is partially supported by a grant from Infosys Foundation. 
+ \subsection*{Acknowledgements} We thank the referee for a careful reading of the paper, pointing out some corrections and giving several useful suggestions which substantially improved the paper. The first author is partially supported by a grant from Infosys Foundation. 
 	
 \subsection*{Declaration of interests}
 The authors declare that they have no known competing financial interests or personal relationships
